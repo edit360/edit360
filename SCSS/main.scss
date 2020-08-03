@@ -1,0 +1,19 @@
+//Variables
+@import 'variables/_variables.scss';
+
+//Mixins
+@import 'mixins/_mixins.scss';
+
+//Base
+@import 'base/_reset.scss';
+@import 'base/_fonts.scss';
+@import 'base/_base.scss';
+
+//Partials
+@import 'partials/_header.scss';
+@import 'partials/_footer.scss';
+
+@import 'partials/_hero.scss';
+@import 'partials/_cartaz.scss';
+@import 'partials/_ofertas.scss';
+@import 'partials/_canal.scss';
