@@ -23,3 +23,12 @@ ul {
 a {
 	text-decoration: none;
 }
+
+#bar {
+	background: $theme;
+	width: 5px;
+	left: 0;
+	max-height: 100%;
+	top: 0;
+	height: 0;
+}
