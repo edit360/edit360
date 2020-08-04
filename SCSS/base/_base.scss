@@ -4,12 +4,12 @@ body {
 
 .wrapper {
 	box-sizing: border-box;
-	max-width: 1265px;
+	max-width: 1289px;
 	width: 100%;
 	margin: 0 auto;
-	@include mq(0,1265px){
-		padding-left: 20px;
-		padding-right: 20px;
+	@include mq(0,1289px){
+		padding-left: 60px;
+		padding-right: 60px;
 	}
 }
 
