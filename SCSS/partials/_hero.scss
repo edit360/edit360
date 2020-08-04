@@ -8,10 +8,17 @@
     .wrapper {
         article {
             &:first-of-type {
+                align-items: center;
+                display: flex;
                 min-height: 85vh;
                 div {
-                    max-width: 50%;
-                    width: 100%;
+                    &:first-of-type {
+                        width: auto;
+                    }
+                    &:last-of-type {
+                        max-width: 50%;
+                        width: 100%;
+                    }
                     h1 {
                         color: $white;
                         font-family: $secondary-font;
