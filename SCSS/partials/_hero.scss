@@ -6,16 +6,74 @@
     height: 100%;
     min-height: 150vh;
     .wrapper {
-        &:first-of-type {
-            align-content: center;
-            display: flex;
-            min-height: 80vh;
-            div {
-                color: $white;
-                width: 100%;
-                max-width: 50%;
-                p {
-                    font-family: $secondary-font;
+        article {
+            &:first-of-type {
+                min-height: 85vh;
+                div {
+                    max-width: 50%;
+                    width: 100%;
+                    h1 {
+                        color: $white;
+                        font-family: $secondary-font;
+                        font-size: 96px;
+                    }
+                    h2 {
+                        color: $white;
+                        font-family: $secondary-font;
+                        font-size: 18px;
+                        text-align: right;
+                    }
+                    p {
+                        color: $white;
+                        font-family: $secondary-font;
+                        font-size: 24px;
+                    }
+                }
+            }
+            &:last-of-type {
+                padding-bottom: 215px;
+                div {
+                    width: 100%;
+                    &:nth-of-type(1) {
+                        max-width: 100%;
+                        h1 {
+                            color: $black;
+                            display: inline-block;
+                            font-family: $primary-font;
+                            font-size: 46px;
+                            font-weight: $bold;
+                            margin-right: 30px;
+                        }
+                        p {
+                            color: $white;
+                            display: inline-block;
+                            font-family: $primary-font;
+                            font-size: 18px;
+                            font-weight: $bold;
+                        }
+                    }
+                    &:nth-of-type(2) {
+                        max-width: 50%;
+                        p {
+                            color: $white;
+                            font-size: 48px;
+                            font-family: $secondary-font;
+                            font-weight: $bold;
+                        }
+                    }
+                    &:nth-of-type(3) {
+                        max-width: 100%;
+                        p {
+                            color: $white;
+                            font-size: 18px;
+                            font-family: $secondary-font;
+                            span {
+                                color: $blue;
+                                font-size: 18px;
+                                font-family: $secondary-font;
+                            }
+                        }
+                    }
                 }
             }
         }
