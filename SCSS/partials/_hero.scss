@@ -9,10 +9,12 @@
     .wrapper {
         article {
             &:first-of-type {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
                 min-height: 85vh;
                 div {
                     &:first-of-type {
-                        margin-bottom: 60px;
                         width: auto;
                     }
                     &:last-of-type {
