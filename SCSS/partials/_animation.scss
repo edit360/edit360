@@ -1,4 +1,4 @@
 @keyframes circle {
-    0%   { transform: translateY(0vh) }
+    0%   { transform: translateY(0); }
     100% { bottom: translateY(100vh); }
 }
