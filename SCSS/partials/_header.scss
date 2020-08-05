@@ -8,16 +8,15 @@ header {
     padding: 20px 0;
     position: fixed;
     width: 100%;
+    z-index: 1;
     .wrapper {
         align-items: center;
         display: flex;
         justify-content: space-between;
         .logo {
-            color: $black;
-            font-size: 18px;
             width: 100%;
             max-width: 50%;
-            span {
+            a {
                 color: $black;
                 font-size: 18px;
                 font-weight: $bold;
@@ -25,10 +24,15 @@ header {
                     color: $blue;
                 }
             }
+            p {
+                color: $black;
+                display: inline;
+                font-size: 18px;
+                margin: 0 5px;
+            }
             svg {
-                display: inline-block;
-                height: 100%;
-                max-height: 26px;
+                display: inline;
+                height: 26px;
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);

@@ -8,7 +8,7 @@
     height: 100%;
     .wrapper {
         article {
-            &:first-of-type {
+            &:nth-of-type(1) {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -16,20 +16,24 @@
                 position: relative;
                 div {
                     &:nth-of-type(1) {
-                        left: 0px;
                         margin-bottom: 60px;
                         position: relative;
                         width: auto;
+                        transition: $tregular;
                     }
                     &:nth-of-type(2) {
                         max-width: 50%;
                         width: 100%;
                     }
                     &#scroll {
+                        align-items: center;
                         background: $red;
                         border-radius: 50%;
                         bottom: 0;
+                        cursor: pointer;
+                        display: flex;
                         height: 80px;
+                        justify-content: center;
                         position: absolute;
                         right: 0;
                         width: 80px;
@@ -54,7 +58,7 @@
                     }
                 }
             }
-            &:last-of-type {
+            &:nth-of-type(2) {
                 background-image: url(../img/ondas_ccb.png);
                 background-position: center;
                 background-size: contain;
@@ -102,6 +106,84 @@
                                 font-size: 18px;
                                 font-family: $secondary-font;
                             }
+                        }
+                    }
+                }
+            }
+            &:nth-of-type(3) {
+                position: fixed;
+                top: 0;
+                div {
+                    &.circle {
+                        animation: circle 30s infinite;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        border-radius: 50%;
+                        background: pink;
+                        filter: grayscale(100%);
+                        position: absolute;
+                        transition: $tregular;
+                        &:hover {
+                            filter: none;
+                        }
+                        &[data-circle='1'] {
+                            animation-delay: 0s;
+                            background-image: url("../img/Frontend imagens/Bolas/Rectangle 9.png");
+                            left: 0vw;
+                            height: 300px;
+                            transform: translateY(35vh);
+                            width: 300px;
+                        }
+                        &[data-circle='2'] {
+                            animation-delay: 0.5s;
+                            background-image: url("../img/Frontend imagens/Bolas/Rectangle 10.png");
+                            left: 10vw;
+                            height: 284px;
+                            transform: translateY(70vh);
+                            width: 284px;
+                        }
+                        &[data-circle='3'] {
+                            animation-delay: 1s;
+                            background-image: url("../img/Frontend imagens/Bolas/Rectangle 9.png");
+                            left: 20vw;
+                            height: 280px;
+                            width: 280px;
+                        }
+                        &[data-circle='4'] {
+                            animation-delay: 1.5s;
+                            background-image: url("../img/Frontend imagens/Bolas/Rectangle 9.png");
+                            left: 30vw;
+                            height: 227px;
+                            width: 227px;
+                        }
+                        &[data-circle='5'] {
+                            animation-delay: 2s;
+                            background-image: url("../img/Frontend imagens/Bolas/Rectangle 9.png");
+                            left: 40vw;
+                            height: 187px;
+                            width: 187px;
+                        }
+                        &[data-circle='6'] {
+                            animation-delay: 2.5s;
+                            background-image: url("../img/Frontend imagens/Bolas/Rectangle 9.png");
+                            left: 50vw;
+                            height: 375px;
+                            width: 375px;
+                        }
+                        &[data-circle='7'] {
+                            animation-delay: 3s;
+                            background-image: url("../img/Frontend imagens/Bolas/Rectangle 9.png");
+                            left: 60vw;
+                            height: 218px;
+                            width: 218px;
+                        }
+                        &[data-circle='8'] {
+                            animation-delay: 3.5s;
+                            background-image: url("../img/Frontend imagens/Bolas/Rectangle 9.png");
+                            left: 70vw;
+                            height: 252px;
+                            width: 252px;
                         }
                     }
                 }
