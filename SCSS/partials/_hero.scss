@@ -126,6 +126,7 @@
                         background-repeat: no-repeat;
                         background-size: cover;
                         border-radius: 50%;
+                        cursor: pointer;
                         filter: grayscale(100%);
                         position: absolute;
                         transform: scale(0.6);
@@ -160,7 +161,7 @@
                         &[data-circle='4'] {
                             animation-delay: 1.5s;
                             background-image: url("../img/Frontend imagens/Bolas/Rectangle 10.png");
-                            bottom: 71vh;
+                            bottom: 69vh;
                             left: 34vw;
                             height: 25vw;
                             width: 25vw;
@@ -168,39 +169,44 @@
                         &[data-circle='5'] {
                             animation-delay: 2s;
                             background-image: url("../img/Frontend imagens/Bolas/Rectangle 6.png");
-                            left: 40vw;
-                            height: 187px;
-                            width: 187px;
+                            bottom: 2vw;
+                            left: 49vw;
+                            height: 20vw;
+                            width: 20vw;
                         }
                         &[data-circle='6'] {
                             animation-delay: 2.5s;
                             background-image: url("../img/Frontend imagens/Bolas/Rectangle 86.png");
-                            left: 50vw;
-                            height: 375px;
-                            width: 375px;
+                            bottom: 29vh;
+                            left: 47vw;
+                            height: 40vw;
+                            width: 40vw;
                         }
                         &[data-circle='7'] {
                             animation-delay: 3s;
                             background-image: url("../img/Frontend imagens/Bolas/photo-of-woman-dancing-4632091.png");
-                            left: 60vw;
-                            height: 218px;
-                            width: 218px;
+                            bottom: 9vh;
+                            left: 65vw;
+                            height: 24vw;
+                            width: 24vw;
                         }
                         &[data-circle='8'] {
                             animation-delay: 3.5s;
                             background-image: url("../img/Frontend imagens/Bolas/Rectangle 11.png");
-                            left: 70vw;
-                            height: 252px;
-                            width: 252px;
+                            bottom: 55vh;
+                            left: 80vw;
+                            height: 25vw;
+                            width: 25vw;
                         }
                     }
                     &.add {
                         animation: circle 20s infinite;
                         background: $black;
                         border-radius: 50%;
-                        height: 60px;
+                        cursor: pointer;
+                        height: 4vw;                        
                         position: absolute;
-                        width: 60px;
+                        width: 4vw;
                         &:before {
                             content: "";
                             background: $white;
@@ -211,14 +217,14 @@
                             transform: translate(-50%, -50%);
                             transition: $tregular;
                             top: 50%;
-                            width: 27.5px;
+                            width: 2vw;
                         }
                         &:after {
                             content: "";
                             background: $white;
                             display: block;
                             left: 50%;
-                            height: 27.5px;
+                            height: 2vw;
                             position: absolute;
                             transform: translate(-50%, -50%);
                             transition: $tregular;
@@ -233,6 +239,31 @@
                                 transform: rotate(90deg) translate(-50%, -50%);
                             }
                         }
+                        &[data-add='1']{
+                            bottom: 19vh;
+                            left: 29vw;
+                        }
+                        &[data-add='2']{
+                            bottom: 86vh;
+                            left: 70vw;
+                        }
+                        &[data-add='3']{
+                            bottom: 44vh;
+                            left: 89vw;
+                        }
+                    }
+                    &#scroll {
+                        align-items: center;
+                        background: $red;
+                        border-radius: 50%;
+                        bottom: 7.5vw;
+                        cursor: pointer;
+                        display: flex;
+                        height: 6.25vw;
+                        justify-content: center;
+                        position: absolute;
+                        right: 7.5vw;
+                        width: 6.25vw;
                     }
                 }
             }
