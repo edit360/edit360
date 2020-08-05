@@ -18,7 +18,7 @@
                 z-index: 1;
                 div {
                     &:nth-of-type(1) {
-                        margin-bottom: 60px;
+                        margin-bottom: 5vw;
                         position: relative;
                         width: auto;
                         transition: $tregular;
@@ -34,17 +34,17 @@
                         bottom: 0;
                         cursor: pointer;
                         display: flex;
-                        height: 80px;
+                        height: 6.25vw;
                         justify-content: center;
                         position: absolute;
                         right: 0;
-                        width: 80px;
+                        width: 6.25vw;
                     }
                     h1 {
                         color: $white;
                         display: inline-block;
                         font-family: $secondary-font;
-                        font-size: 96px;
+                        font-size: 7vw;
                     }
                     h2 {
                         color: $white;
@@ -56,7 +56,7 @@
                     p {
                         color: $white;
                         font-family: $secondary-font;
-                        font-size: 24px;
+                        font-size: 1.6vw;
                     }
                 }
             }
@@ -75,15 +75,15 @@
                             color: $black;
                             display: inline-block;
                             font-family: $primary-font;
-                            font-size: 46px;
+                            font-size: 3.2vw;
                             font-weight: $bold;
-                            margin-right: 30px;
+                            margin-right: 1.5vw;
                         }
                         p {
                             color: $white;
                             display: inline-block;
                             font-family: $primary-font;
-                            font-size: 18px;
+                            font-size: 1.25vw;
                             font-weight: $bold;
                         }
                     }
@@ -121,46 +121,49 @@
                 width: 100vw;
                 div {
                     &.circle {
-                        animation: circle 20s infinite;
+                        // animation: circle 20s infinite;
                         background-position: center;
                         background-repeat: no-repeat;
                         background-size: cover;
                         border-radius: 50%;
                         filter: grayscale(100%);
                         position: absolute;
+                        transform: scale(0.6);
                         transition: $tregular;
                         &:hover {
                             filter: none;
                         }
                         &[data-circle='1'] {
                             animation-delay: 0s;
-                            bottom: 5vh;
+                            bottom: 6vh;
                             background-image: url("../img/Frontend imagens/Bolas/Rectangle 9.png");
                             left: -10vw;
-                            height: 300px;
-                            width: 300px;
+                            height: 32.5vw;
+                            width: 32.5vw;
                         }
                         &[data-circle='2'] {
                             animation-delay: 0.5s;
                             background-image: url("../img/Frontend imagens/Bolas/Rectangle 8.png");
-                            bottom: 55vh;
-                            left: 6.5vw;
-                            height: 284px;
-                            width: 284px;
+                            bottom: 56vh;
+                            left: 3.5vw;
+                            height: 29vw;
+                            width: 29vw;
                         }
                         &[data-circle='3'] {
                             animation-delay: 1s;
-                            background-image: url("../img/Frontend imagens/Bolas/Filipe_Sambado.png");
-                            left: 20vw;
-                            height: 280px;
-                            width: 280px;
+                            background-image: url("../img/Frontend imagens/Cartaz/Filipe_Sambado.png");
+                            bottom: 17vh;
+                            left: 28vw;
+                            height: 32vw;
+                            width: 32vw;
                         }
                         &[data-circle='4'] {
                             animation-delay: 1.5s;
                             background-image: url("../img/Frontend imagens/Bolas/Rectangle 10.png");
-                            left: 30vw;
-                            height: 227px;
-                            width: 227px;
+                            bottom: 71vh;
+                            left: 34vw;
+                            height: 25vw;
+                            width: 25vw;
                         }
                         &[data-circle='5'] {
                             animation-delay: 2s;
@@ -190,42 +193,44 @@
                             height: 252px;
                             width: 252px;
                         }
-                        &.add {
-                            animation: circle 20s infinite;
-                            background: $black;
-                            height: 60px;
-                            width: 60px;
-                            &:before {
-                                content: "";
-                                background: $white;
-                                display: block;
-                                left: 50%;
-                                height: 1px;
-                                position: absolute;
-                                transform: translate(-50%, -50%);
-                                transition: $tregular;
-                                top: 50%;
-                                width: 27.5px;
-                                
+                    }
+                    &.add {
+                        animation: circle 20s infinite;
+                        background: $black;
+                        border-radius: 50%;
+                        height: 60px;
+                        position: absolute;
+                        width: 60px;
+                        &:before {
+                            content: "";
+                            background: $white;
+                            display: block;
+                            left: 50%;
+                            height: 1px;
+                            position: absolute;
+                            transform: translate(-50%, -50%);
+                            transition: $tregular;
+                            top: 50%;
+                            width: 27.5px;
+                        }
+                        &:after {
+                            content: "";
+                            background: $white;
+                            display: block;
+                            left: 50%;
+                            height: 27.5px;
+                            position: absolute;
+                            transform: translate(-50%, -50%);
+                            transition: $tregular;
+                            top: 50%;
+                            width: 1px;
+                        }
+                        &:hover {
+                            &:before{
+                                transform: rotate(90deg) translate(-50%, -50%);
                             }
-                            &:after {
-                                content: "";
-                                background: $white;
-                                display: block;
-                                height: 27.5px;
-                                position: absolute;
-                                transform: translate(-50%, -50%);
-                                transition: $tregular;
-                                top: 50%;
-                                width: 1px;
-                            }
-                            &:hover {
-                                &:before{
-                                    transform: rotate(45deg) translate(-50%, -50%);
-                                }
-                                &:after{
-                                    transform: rotate(45deg) translate(-50%, -50%);
-                                }
+                            &:after{
+                                transform: rotate(90deg) translate(-50%, -50%);
                             }
                         }
                     }
