@@ -7,7 +7,7 @@ body {
 	max-width: 1289px;
 	width: 100%;
 	margin: 0 auto;
-	@include mq(0,1289px){
+	@include mq(0,1409px){
 		padding-left: 60px;
 		padding-right: 60px;
 	}

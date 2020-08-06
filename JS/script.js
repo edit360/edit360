@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    
+
     //Titulo Cortado
     left();
     window.addEventListener('resize', left);
@@ -7,7 +7,7 @@ $(document).ready(function() {
     function left() {
         let offset = $( ".hero .wrapper" ).offset();
 
-        if (window.innerWidth >= 1289) {
+        if (window.innerWidth >= 1409) {
             let left = offset.left + 10;
             document.querySelector(".left").style.left =  "-" + left + "px";
         }
@@ -16,7 +16,6 @@ $(document).ready(function() {
             document.querySelector(".left").style.left =  "-" + left + "px";
         }
     }
-
 
     //Scroll Down
     $("#scroll").click(function() {

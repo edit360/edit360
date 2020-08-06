@@ -44,7 +44,7 @@
                         color: $white;
                         display: inline-block;
                         font-family: $secondary-font;
-                        font-size: 7vw;
+                        font-size: 96px;
                     }
                     h2 {
                         color: $white;
@@ -56,7 +56,12 @@
                     p {
                         color: $white;
                         font-family: $secondary-font;
-                        font-size: 1.6vw;
+                        font-size: 24px;
+                        line-height: $primary-line-height;
+                        span {
+                            font-size: inherit;
+                            text-decoration: underline;
+                        }
                     }
                 }
             }
@@ -75,9 +80,9 @@
                             color: $black;
                             display: inline-block;
                             font-family: $primary-font;
-                            font-size: 3.2vw;
+                            font-size: 46px;
                             font-weight: $bold;
-                            margin-right: 1.5vw;
+                            margin-right: 30px;
                         }
                         p {
                             color: $white;
@@ -139,64 +144,64 @@
                             bottom: 6vh;
                             background-image: url("../img/Frontend imagens/Bolas/Rectangle 9.png");
                             left: -10vw;
-                            height: 32.5vw;
-                            width: 32.5vw;
+                            height: 300px;
+                            width: 300px;
                         }
                         &[data-circle='2'] {
                             animation-delay: 0.5s;
                             background-image: url("../img/Frontend imagens/Bolas/Rectangle 8.png");
                             bottom: 56vh;
                             left: 3.5vw;
-                            height: 29vw;
-                            width: 29vw;
+                            height: 284px;
+                            width: 284px;
                         }
                         &[data-circle='3'] {
                             animation-delay: 1s;
                             background-image: url("../img/Frontend imagens/Cartaz/Filipe_Sambado.png");
                             bottom: 17vh;
                             left: 28vw;
-                            height: 32vw;
-                            width: 32vw;
+                            height: 280px;
+                            width: 280px;
                         }
                         &[data-circle='4'] {
                             animation-delay: 1.5s;
                             background-image: url("../img/Frontend imagens/Bolas/Rectangle 10.png");
                             bottom: 69vh;
                             left: 34vw;
-                            height: 25vw;
-                            width: 25vw;
+                            height: 227px;
+                            width: 227px;
                         }
                         &[data-circle='5'] {
                             animation-delay: 2s;
                             background-image: url("../img/Frontend imagens/Bolas/Rectangle 6.png");
                             bottom: 2vw;
                             left: 49vw;
-                            height: 20vw;
-                            width: 20vw;
+                            height: 227px;
+                            width: 227px;
                         }
                         &[data-circle='6'] {
                             animation-delay: 2.5s;
                             background-image: url("../img/Frontend imagens/Bolas/Rectangle 86.png");
                             bottom: 29vh;
                             left: 47vw;
-                            height: 40vw;
-                            width: 40vw;
+                            height: 375px;
+                            width: 375px;
                         }
                         &[data-circle='7'] {
                             animation-delay: 3s;
                             background-image: url("../img/Frontend imagens/Bolas/photo-of-woman-dancing-4632091.png");
                             bottom: 9vh;
                             left: 65vw;
-                            height: 24vw;
-                            width: 24vw;
+                            height: 187px;
+                            width: 187px;
                         }
                         &[data-circle='8'] {
                             animation-delay: 3.5s;
                             background-image: url("../img/Frontend imagens/Bolas/Rectangle 11.png");
                             bottom: 55vh;
                             left: 80vw;
-                            height: 25vw;
-                            width: 25vw;
+                            height: 252px;
+                            width: 252px;
                         }
                     }
                     &.add {
@@ -204,9 +209,9 @@
                         background: $black;
                         border-radius: 50%;
                         cursor: pointer;
-                        height: 4vw;                        
+                        height: 60px;                        
                         position: absolute;
-                        width: 4vw;
+                        width: 60px;
                         &:before {
                             content: "";
                             background: $white;
@@ -259,11 +264,11 @@
                         bottom: 7.5vw;
                         cursor: pointer;
                         display: flex;
-                        height: 6.25vw;
+                        height: 80px;
                         justify-content: center;
                         position: absolute;
                         right: 7.5vw;
-                        width: 6.25vw;
+                        width: 80px;
                     }
                 }
             }
