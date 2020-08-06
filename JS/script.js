@@ -6,14 +6,16 @@ $(document).ready(function() {
 
     function left() {
         let offset = $( ".hero .wrapper" ).offset();
+        let largura = document.querySelector('.left h1').offsetWidth;
+        document.querySelector(".left").style.width = largura + "px";
 
         if (window.innerWidth >= 1409) {
             let left = offset.left + 10;
-            document.querySelector(".left").style.left =  "-" + left + "px";
+            document.querySelector(".left").style.left = "-" + left + "px";
         }
         else {
             let left = offset.left + 70;
-            document.querySelector(".left").style.left =  "-" + left + "px";
+            document.querySelector(".left").style.left = "-" + left + "px";
         }
     }
 
