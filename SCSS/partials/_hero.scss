@@ -1,7 +1,7 @@
 .hero {
     background-attachment: fixed;
-    background-image: url(../img/fundo_base.png);
-    background-position: center;
+    background-image: url("../img/fundo_base.png");
+    background-position: top;
     background-repeat: no-repeat;
     background-size: 100%;
     width: 100%;
@@ -12,32 +12,21 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                min-height: calc(100vh - 96px);
+                min-height: calc(100vh - 76px);
                 position: relative;
+                pointer-events: none;
                 z-index: 1;
                 div {
                     &:nth-of-type(1) {
-                        margin-bottom: 60px;
+                        margin-bottom: 5vw;
                         position: relative;
                         width: auto;
+                        text-align: right;
                         transition: $tregular;
                     }
                     &:nth-of-type(2) {
                         max-width: 50%;
                         width: 100%;
-                    }
-                    &#scroll {
-                        align-items: center;
-                        background: $red;
-                        border-radius: 50%;
-                        bottom: 0;
-                        cursor: pointer;
-                        display: flex;
-                        height: 80px;
-                        justify-content: center;
-                        position: absolute;
-                        right: 0;
-                        width: 80px;
                     }
                     h1 {
                         color: $white;
@@ -56,15 +45,17 @@
                         color: $white;
                         font-family: $secondary-font;
                         font-size: 24px;
+                        line-height: $primary-line-height;
+                        span {
+                            font-size: inherit;
+                            text-decoration: underline;
+                        }
                     }
                 }
             }
             &:nth-of-type(2) {
-                background-image: url(../img/ondas_ccb.png);
-                background-position: center;
-                background-size: contain;
-                background-repeat: no-repeat;
                 padding-bottom: 215px;
+                position: relative;
                 div {
                     width: 100%;
                     &:nth-of-type(1) {
@@ -82,7 +73,7 @@
                             color: $white;
                             display: inline-block;
                             font-family: $primary-font;
-                            font-size: 18px;
+                            font-size: 1.25vw;
                             font-weight: $bold;
                         }
                     }
@@ -110,11 +101,23 @@
                         }
                     }
                 }
+                img {
+                    animation: slide 5s infinite;
+                    left: 50%;
+                    opacity: 0.2;
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 100vw;
+                }
             }
             &:nth-of-type(3) {
-                min-height: calc(100vh - 96px);
-                position: fixed;
+                left: 0;
+                height: 100vh;
+                position: absolute;
+                overflow: hidden;
                 top: 0;
+                width: 100vw;
                 div {
                     &.circle {
                         animation: circle 20s infinite;
@@ -122,15 +125,20 @@
                         background-repeat: no-repeat;
                         background-size: cover;
                         border-radius: 50%;
+                        cursor: pointer;
                         filter: grayscale(100%);
+                        opacity: 0;
                         position: absolute;
                         transition: $tregular;
                         &:hover {
                             filter: none;
                         }
+                        &:active {
+                            transform: scale(0.8);
+                        }
                         &[data-circle='1'] {
                             animation-delay: 0s;
-                            bottom: 5vh;
+                            bottom: 6vh;
                             background-image: url("../img/Frontend imagens/Bolas/Rectangle 9.png");
                             left: -10vw;
                             height: 300px;
@@ -138,52 +146,255 @@
                         }
                         &[data-circle='2'] {
                             animation-delay: 0.5s;
-                            background-image: url("../img/Frontend imagens/Bolas/Rectangle 10.png");
-                            left: 10vw;
+                            background-image: url("../img/Frontend imagens/Bolas/Rectangle 8.png");
+                            bottom: 56vh;
+                            left: 3.5vw;
                             height: 284px;
                             width: 284px;
                         }
                         &[data-circle='3'] {
                             animation-delay: 1s;
-                            background-image: url("../img/Frontend imagens/Bolas/Filipe_Sambado.png");
-                            left: 20vw;
+                            background-image: url("../img/Frontend imagens/Cartaz/Filipe_Sambado.png");
+                            bottom: 17vh;
+                            left: 28vw;
                             height: 280px;
                             width: 280px;
                         }
                         &[data-circle='4'] {
                             animation-delay: 1.5s;
                             background-image: url("../img/Frontend imagens/Bolas/Rectangle 10.png");
-                            left: 30vw;
+                            bottom: 69vh;
+                            left: 34vw;
                             height: 227px;
                             width: 227px;
                         }
                         &[data-circle='5'] {
                             animation-delay: 2s;
                             background-image: url("../img/Frontend imagens/Bolas/Rectangle 6.png");
-                            left: 40vw;
+                            bottom: 2vw;
+                            left: 49vw;
                             height: 187px;
                             width: 187px;
                         }
                         &[data-circle='6'] {
                             animation-delay: 2.5s;
                             background-image: url("../img/Frontend imagens/Bolas/Rectangle 86.png");
-                            left: 50vw;
+                            bottom: 29vh;
+                            left: 47vw;
                             height: 375px;
                             width: 375px;
                         }
                         &[data-circle='7'] {
                             animation-delay: 3s;
                             background-image: url("../img/Frontend imagens/Bolas/photo-of-woman-dancing-4632091.png");
-                            left: 60vw;
-                            height: 218px;
-                            width: 218px;
+                            bottom: 9vh;
+                            left: 65vw;
+                            height: 227px;
+                            width: 227px;
                         }
                         &[data-circle='8'] {
                             animation-delay: 3.5s;
                             background-image: url("../img/Frontend imagens/Bolas/Rectangle 11.png");
-                            left: 70vw;
+                            bottom: 55vh;
+                            left: 80vw;
                             height: 252px;
                             width: 252px;
+                        }
+                    }
+                    &.add {
+                        background: $black;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        height: 60px;                        
+                        position: absolute;
+                        transition: $tregular;
+                        width: 60px;
+                        &:before {
+                            content: "";
+                            background: $white;
+                            display: block;
+                            left: 50%;
+                            height: 1px;
+                            position: absolute;
+                            transform: translate(-50%, -50%);
+                            transform-origin: 0 0;
+                            transition: $tregular;
+                            top: 50%;
+                            width: 2vw;
+                        }
+                        &:after {
+                            content: "";
+                            background: $white;
+                            display: block;
+                            left: 50%;
+                            height: 2vw;
+                            position: absolute;
+                            transform: translate(-50%, -50%);
+                            transform-origin: 0 0;
+                            transition: $tregular;
+                            top: 50%;
+                            width: 1px;
+                        }
+                        &:hover {
+                            background: $blue;
+                        }
+                        &:active {
+                            transform: scale(0.8);
+                        }
+                        &[data-add='1']{
+                            bottom: 19vh;
+                            left: 29vw;
+                        }
+                        &[data-add='2']{
+                            bottom: 80vh;
+                            left: 70vw;
+                        }
+                        &[data-add='3']{
+                            bottom: 44vh;
+                            left: 89vw;
+                        }
+                    }
+                    &#scroll {
+                        align-items: center;
+                        background: $red;
+                        border-radius: 50%;
+                        bottom: 7.5vw;
+                        cursor: pointer;
+                        display: flex;
+                        height: 80px;
+                        justify-content: center;
+                        position: absolute;
+                        right: 7.5vw;
+                        width: 80px;
+                    }
+                }
+                form {
+                    background: $white;
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    display: none;
+                    left: 50%;
+                    padding: 50px 30px;
+                    position: fixed;
+                    transform: translate(-50%, -50%);
+                    top: 50%;
+                    width: 500px;
+                    z-index: 1;
+                    h1 {
+                        font-family: $secondary-font;
+                        font-size: 24px;
+                        font-weight: $bold;
+                        margin-bottom: 15px;
+                    }
+                    p {
+                        font-family: $secondary-font;
+                        font-size: 13px;
+                        margin-bottom: 30px;
+                    }
+                    textarea {
+                        background: $grey;
+                        border: none;
+                        font-family: $secondary-font;
+                        font-size: 15px;
+                        margin-bottom: 38px;
+                        padding: 14px;
+                        width: 100%;
+                    }
+                    label {
+                        display: inline-block;
+                        font-family: $secondary-font;
+                        font-size: 18px;
+                        font-weight: $bold;
+                        margin-bottom: 15px;
+                    }
+                    input {
+                        background: $grey;
+                        border: none;
+                        font-family: $secondary-font;
+                        font-size: 15px;
+                        margin: 0;
+                        padding: 14px;
+                        width: 100%;
+                    }
+                    div {
+                        display: inline-block;
+                        margin-bottom: 25px;
+                        &.nome {
+                            margin-right: 30px;
+                            width: 160px;
+                        }
+                        &.email {
+                            width: 250px;
+                        }
+                    }
+                    a {
+                        color: $blue;
+                        display: inline-block;
+                        font-family: $secondary-font;
+                        font-size: 18px;
+                        font-weight: $bold;
+                        padding: 15px 0;
+                        text-align: center;
+                        transition: $tfast;
+                        &:nth-of-type(1) {
+                            display: block;
+                            position: absolute;
+                            height: 15px;
+                            overflow: hidden;
+                            right: 30px;
+                            top: 17.5px;
+                            width: 15px;
+                            &:before {
+                                background: $black;
+                                content: "";
+                                display: block;
+                                left: 50%;
+                                height: 1px;
+                                position: absolute;
+                                transform: translate(-50%, 50%) rotate(45deg);
+                                transition: $tfast;
+                                top: 50%;
+                                width: 100%;
+                            }
+                            &:after {
+                                background: $black;
+                                content: "";
+                                display: block;
+                                left: 50%;
+                                height: 1px;
+                                position: absolute;
+                                transform: translate(-50%, 50%) rotate(-45deg);
+                                transition: $tfast;
+                                top: 50%;
+                                width: 100%;
+                            }
+                        }
+                        &:nth-of-type(2){
+                            margin-right: 30px;
+                            text-decoration: underline;
+                            width: 160px;
+                        }
+                        &:nth-of-type(3){
+                            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                            position: relative;
+                            width: 250px;
+                            &:before {
+                                background: $blue;
+                                content: "";
+                                display: inline-block;
+                                width: 8px;
+                                height: 100%;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                transition: $tfast;
+                                z-index: -1;
+                            }
+                            &:hover {
+                                color: $white;
+                                &:before {
+                                    width: 100%;
+                                }
+                            }
                         }
                     }
                 }

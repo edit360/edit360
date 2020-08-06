@@ -1,0 +1,159 @@
+.artista {
+    align-items: center;
+    background: $mid-blue;
+    display: flex;
+    left: 100vw;
+    height: 100vh;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    transition: $tslow;
+    width: 100%;
+    z-index: 1;
+    &.open {
+        left: 0;
+    }
+    .wrapper {
+        article {
+            display: inline-block;
+            width: 100%;
+            &:nth-of-type(1) {
+                padding-bottom: 50px;
+                text-align: center;
+                p {
+                    color: $black;
+                    font-family: $secondary-font;
+                    font-size: 14px;
+                    font-weight: $bold;
+                    margin-bottom: 15px;
+                    text-decoration: underline;
+                }
+                a {
+                    display: inline-block;
+                    position: relative;
+                    height: 15px;
+                    overflow: hidden;
+                    width: 15px;
+                    &:before {
+                        background: $black;
+                        content: "";
+                        display: block;
+                        left: 50%;
+                        height: 1px;
+                        position: absolute;
+                        transform: translate(-50%, 50%) rotate(45deg);
+                        transition: $tfast;
+                        top: 50%;
+                        width: 100%;
+                    }
+                    &:after {
+                        background: $black;
+                        content: "";
+                        display: block;
+                        left: 50%;
+                        height: 1px;
+                        position: absolute;
+                        transform: translate(-50%, 50%) rotate(-45deg);
+                        transition: $tfast;
+                        top: 50%;
+                        width: 100%;
+                    }
+                    &:hover {
+                        &:before {
+                            background: $blue;
+                        }
+                        &:after {
+                            background: $blue;
+                        }
+                    }
+                }
+            }
+            &:nth-of-type(2) {
+                display: flex;
+                justify-content: space-between;
+                justify-items: center;
+                align-items: center;
+                div {
+                    display: inline-block;
+                    &:nth-of-type(1) {
+                        width: 50%;
+                        .date {
+                            margin-bottom: 70px;
+                            padding: 0 15px;
+                            position: relative;
+                            text-align: center;
+                            width: auto;
+                            p {
+                                color: $black;
+                                display: inline-block;
+                                font-family: $secondary-font;
+                                font-size: 18px;
+                                margin-bottom: 0px;
+                                &:first-of-type {
+                                    margin-bottom: 10px;
+                                }
+                            }
+                            &:after {
+                                background: $black;
+                                content: "";
+                                display: block;
+                                height: 1px;
+                                left: 50%;
+                                position: absolute;
+                                top: 50%;
+                                transform: translate(-50%,-50%);
+                                width: 100%;
+                            }
+                        }
+                        p {
+                            color: $black;
+                            font-family: $secondary-font;
+                            font-size: 12px;
+                            line-height: $primary-line-height;
+                            margin-bottom: 40px;
+                            text-align: justify;
+                        }
+                        h1 {
+                            color: $white;
+                            font-family: $secondary-font;
+                            font-size: 18px;
+                            font-weight: $bold;
+                            margin-bottom: 10px;
+                        }
+                        h2 {
+                            color: $red;
+                            font-size: 14px;
+                            span {
+                                font-size: 14px;
+                                font-weight: $bold;
+                            }
+                        }
+                    }
+                    &:nth-of-type(2) {
+                        background-image: url("../img/Frontend imagens/Cartaz/Filipe_Sambado.png");
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        height: 60vh;
+                        position: relative;
+                        width: 40%;
+                        &:after {
+                            background-image: url("../img/fundo_base.png");
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            content: "";
+                            display: block;
+                            height: 100%;
+                            width: 100%;
+                            position: relative;
+                            left: 10vw;
+                            transform: scale(1.2);
+                            z-index: -1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

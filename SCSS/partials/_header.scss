@@ -1,14 +1,15 @@
 header {
     background-attachment: fixed;
     background-image: url(../img/fundo_base.png);
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: 100%;
     border-bottom: 1px solid $white;
     padding: 20px 0;
     position: fixed;
+    transition: $tslow;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
     .wrapper {
         align-items: center;
         display: flex;
