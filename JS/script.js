@@ -17,6 +17,20 @@ $(document).ready(function() {
         }
     }
 
+    //Página de artistas
+    //Abrir
+    $('.circle').click(function(){
+        $('.artista').addClass('open');
+        $("header").css("background-image", "none");
+        document.body.style.overflow = "hidden";
+    });
+    //Fechar
+    $('.artista a').click(function(){
+        $('.artista').removeClass('open');
+        $("header").css("background-image", "url(../img/fundo_base.png)");
+        document.body.style.overflow = "auto";
+    });
+
     //Scroll Down
     $("#scroll").click(function() {
         let height = $('.hero .wrapper article').outerHeight() - 76;
