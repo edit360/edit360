@@ -12,7 +12,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                min-height: calc(100vh - 96px);
+                min-height: calc(100vh - 76px);
                 position: relative;
                 pointer-events: none;
                 z-index: 1;
@@ -126,15 +126,16 @@
                 width: 100vw;
                 div {
                     &.circle {
-                        // animation: circle 20s infinite;
+                        animation: circle 20s infinite;
                         background-position: center;
                         background-repeat: no-repeat;
                         background-size: cover;
                         border-radius: 50%;
                         cursor: pointer;
                         filter: grayscale(100%);
+                        opacity: 0;
                         position: absolute;
-                        transform: scale(0.6);
+                        // transform: scale(0.6);
                         transition: $tregular;
                         &:hover {
                             filter: none;
@@ -176,8 +177,8 @@
                             background-image: url("../img/Frontend imagens/Bolas/Rectangle 6.png");
                             bottom: 2vw;
                             left: 49vw;
-                            height: 227px;
-                            width: 227px;
+                            height: 187px;
+                            width: 187px;
                         }
                         &[data-circle='6'] {
                             animation-delay: 2.5s;
@@ -192,8 +193,8 @@
                             background-image: url("../img/Frontend imagens/Bolas/photo-of-woman-dancing-4632091.png");
                             bottom: 9vh;
                             left: 65vw;
-                            height: 187px;
-                            width: 187px;
+                            height: 227px;
+                            width: 227px;
                         }
                         &[data-circle='8'] {
                             animation-delay: 3.5s;
@@ -205,7 +206,6 @@
                         }
                     }
                     &.add {
-                        animation: circle 20s infinite;
                         background: $black;
                         border-radius: 50%;
                         cursor: pointer;
@@ -220,6 +220,7 @@
                             height: 1px;
                             position: absolute;
                             transform: translate(-50%, -50%);
+                            transform-origin: 0 0;
                             transition: $tregular;
                             top: 50%;
                             width: 2vw;
@@ -232,6 +233,7 @@
                             height: 2vw;
                             position: absolute;
                             transform: translate(-50%, -50%);
+                            transform-origin: 0 0;
                             transition: $tregular;
                             top: 50%;
                             width: 1px;

@@ -19,7 +19,7 @@ $(document).ready(function() {
 
     //Scroll Down
     $("#scroll").click(function() {
-        let height = $('.hero .wrapper article').outerHeight() - 100;
+        let height = $('.hero .wrapper article').outerHeight() - 76;
         $('html, body').animate({scrollTop: height}, 800);
     });
 
