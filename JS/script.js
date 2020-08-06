@@ -20,14 +20,26 @@ $(document).ready(function() {
     //Página de artistas
     //Abrir
     $('.circle').click(function(){
-        $('.artista').addClass('open');
-        $("header").css("background-image", "none");
-        document.body.style.overflow = "hidden";
+        let value = $(this).data('circle');
+
+        $('.artista').each(function(){
+            if (value == $(this).data('circle')){
+                //Abrir
+                $(this).addClass('open');
+                //Retirar Background do header
+                $("header").css("background-image", "none");
+                //Impedir scroll
+                document.body.style.overflow = "hidden";
+            }
+        });
     });
     //Fechar
     $('.artista a').click(function(){
+        //Fechar
         $('.artista').removeClass('open');
+        //Repor Background do header
         $("header").css("background-image", "url(../img/fundo_base.png)");
+        //Permitir scroll
         document.body.style.overflow = "auto";
     });
 
