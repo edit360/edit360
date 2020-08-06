@@ -336,7 +336,37 @@
                         text-align: center;
                         transition: $tfast;
                         &:nth-of-type(1) {
-
+                            display: block;
+                            position: absolute;
+                            height: 15px;
+                            overflow: hidden;
+                            right: 30px;
+                            top: 17.5px;
+                            width: 15px;
+                            &:before {
+                                background: $black;
+                                content: "";
+                                display: block;
+                                left: 50%;
+                                height: 1px;
+                                position: absolute;
+                                transform: translate(-50%, 50%) rotate(45deg);
+                                transition: $tfast;
+                                top: 50%;
+                                width: 100%;
+                            }
+                            &:after {
+                                background: $black;
+                                content: "";
+                                display: block;
+                                left: 50%;
+                                height: 1px;
+                                position: absolute;
+                                transform: translate(-50%, 50%) rotate(-45deg);
+                                transition: $tfast;
+                                top: 50%;
+                                width: 100%;
+                            }
                         }
                         &:nth-of-type(2){
                             margin-right: 30px;
