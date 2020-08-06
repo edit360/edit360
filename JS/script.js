@@ -45,10 +45,23 @@ $(document).ready(function() {
         document.body.style.overflow = "auto";
     });
 
+
     //Scroll Down
     $("#scroll").click(function() {
         let height = $('.hero .wrapper article').outerHeight() - 76;
         $('html, body').animate({scrollTop: height}, 800);
+    });
+
+
+    //Form
+    $(".add").click(function() {
+        $("form").css("display", "block");
+    });
+
+    let formClose = document.querySelector("form a")
+
+    $(formClose).click(function() {
+        $("form").css("display", "none");
     });
 
 
