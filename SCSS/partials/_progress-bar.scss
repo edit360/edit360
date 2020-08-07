@@ -1,0 +1,15 @@
+#progressBar {
+    background-attachment: fixed;
+    background-image: url("../img/fundo_base.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 0;
+    left: 0;
+    position: fixed;
+    max-height: calc(100vh - 59px);
+    transition: height ease-in-out;
+    top: 59px;
+    width: 50px;
+    z-index: -1;
+}
