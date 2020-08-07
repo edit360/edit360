@@ -14,7 +14,7 @@ footer {
                 color: $white;
                 display: inline;
                 font-size: 18px;
-                margin-right: 5px;
+                margin-right: 10px;
             }
             svg {
                 fill: $white;
@@ -34,7 +34,7 @@ footer {
                 width: 100%;
                 li {
                     &:not(:first-of-type) {
-                        margin-left: 15px;
+                        margin-left: 20px;
                     }
                     a {
                         svg {

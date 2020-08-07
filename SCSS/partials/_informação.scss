@@ -97,9 +97,14 @@
                     width: 50%;
                     margin: 100px auto 0;
                     img {
+                        cursor: pointer;
+                        transition: $tfast;
                         width: 100%;
                         &:first-of-type {
                             margin-bottom: 15px;
+                        }
+                        &:hover {
+                            filter: brightness(100);
                         }
                     }
                 }
