@@ -1,0 +1,265 @@
+.bilhetes {
+    background-attachment: fixed;
+    background-color: $white;
+    background-image: url("../img/fundo_base.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    padding-top: 150px;
+    position: relative;
+    &:before {
+        background: $white;
+        content: "";
+        display: block;
+        left: 0;
+        height: 520px;
+        top: 0;
+        width: 100%;
+        z-index: 0;
+        position: absolute;
+    }
+    .title {
+        position: relative;
+        padding-left: 10%;
+        z-index: 0;
+        h1{
+            display: table;
+            padding: 15px;
+            background-color: $white;
+            color: $lavender;
+            font-family: $secondary-font;
+            font-size: 36px;
+            font-weight: 700;
+            &:before{
+                content: "";
+                z-index: -1;
+                border: 1px solid $lavender;
+                position: absolute;
+                width: 100%;
+                left: 0;
+                bottom: 30px;
+            }
+        }
+    }
+    .wrapper {
+        position: relative;
+        z-index: 1;
+        article {
+            &.cartaoccb {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                div {
+                    display: inline-block;
+                    &:nth-of-type(1) {
+                        width: 60%;
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                    &:nth-of-type(2) {
+                        width: 40%;
+                        h3 {
+                            font-family: $secondary-font;
+                            font-weight: $regular;
+                            font-size: 18px;
+                            line-height: $primary-line-height;    
+                            margin-bottom: 30px;                        
+                            text-decoration-line: underline;
+                        }
+                        p {
+                            font-family: $secondary-font;
+                            font-weight: $regular;
+                            font-size: 18px;
+                            line-height: $primary-line-height;                            
+                            margin-bottom: 70px;
+                        }
+                        .btn {
+                            color: $blue;
+                            display: inline-block;
+                            font-family: $secondary-font;
+                            font-size: 18px;
+                            font-weight: $bold;
+                            padding: 15px 0;
+                            text-align: center;
+                            transition: $tfast;
+                            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                            position: relative;
+                            width: 250px;
+                            &:before {
+                                background: $blue;
+                                content: "";
+                                display: inline-block;
+                                width: 8px;
+                                height: 100%;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                transition: $tfast;
+                                z-index: -1;
+                            }
+                            &:after {
+                                background: $white;
+                                content: "";
+                                display: inline-block;
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                z-index: -2;
+                            }
+                            &:hover {
+                                color: $white;
+                                &:before {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.cartoes {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 100%;
+                margin-bottom: 50px;
+                margin-top: 75px;
+                width: 100%;
+                .cartao {
+                    height: 100%;
+                    width: 20%;
+                    &[data-cartao="xs"]{
+                        article{
+                            background-image: url("../img/Frontend imagens/Bolas/Rectangle 86.png");
+                            &:after {
+                                content: "XS";
+                            }
+                        }
+                    }
+                    &[data-cartao="s"]{
+                        article{
+                            background-image: url("../img/Frontend imagens/Bolas/photo-of-woman-dancing-4632091.png");
+                            &:after {
+                                content: "S";
+                            }
+                        }
+                    }
+                    &[data-cartao="full"]{
+                        width: 25%;
+                        article{
+                            background-image: url("../img/Frontend imagens/Bolas/Rectangle 11.png");
+                            padding: 130px 20px;
+                            &:after {
+                                content: "FULL EXPERIENCE";
+                                background-image: url("../img/fundo_base.png");
+                                background-position: top left;
+                                background-repeat: no-repeat;
+                                background-size: 300%;
+                                font-size: 44px;
+                            }
+                        }
+                    }
+                    &[data-cartao="xl"]{
+                        article{
+                            background-image: url("../img/Frontend imagens/Cartaz/Long_Nights.png");
+                            &:after {
+                                content: "XL";
+                            }
+                        }
+                    }
+                    article {
+                        background-blend-mode: darken;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        padding: 80px 20px;
+                        position: relative;
+                        transform: rotateX(0deg);
+                        transition: $tregular;
+                        width: 100%;
+                        &:after {
+                            content: "XS";
+                            background: $dark-blue;
+                            color: $white;
+                            display: block;
+                            font-family: $secondary-font;
+                            font-weight: $bold;
+                            font-size: 90px;
+                            left: 0;
+                            height: 100%;
+                            position: absolute;
+                            text-align: right;
+                            top: 0;
+                            transition: $tregular;
+                            width: 100%;
+                        }
+                        &:hover {
+                            &:after {
+                                transform: rotateX(90deg);
+                            }
+                        }
+                        p {
+                            color: $white;
+                            font-family: $secondary-font;
+                            font-weight: $bold;
+                            font-size: 22px;
+                            line-height: $primary-line-height;
+                            position: relative;
+                            &:first-of-type {
+                                margin-bottom: 40px;
+                                &:after {
+                                    background: $white;
+                                    bottom: -20px;
+                                    content: "";
+                                    display: block;
+                                    height: 1px;
+                                    position: relative;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                    div {
+                        border-bottom: 1px solid $white;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 35px 0 5px;
+                        width: 100%;
+                        p {
+                            color: $white;
+                            display: inline-block;
+                            font-family: $secondary-font;
+                            font-weight: $bold;
+                            font-size: 18px;
+                        }
+                        a {
+                            color: $white;
+                            display: inline-block;
+                            font-family: $secondary-font;
+                            font-weight: $bold;
+                            font-size: 18px;
+                            &:hover {
+                                color: $blue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        h2 {
+            color: $white;
+            font-family: $secondary-font;
+            font-weight: $bold;
+            font-size: 48px;
+            text-align: center;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            width: 100%;
+        }
+    }
+}
