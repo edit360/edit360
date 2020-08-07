@@ -1,0 +1,56 @@
+footer {
+    background: $black;
+    padding: 25px 0;
+    width: 100%;
+    .wrapper {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        div {
+            width: 100%;
+            max-width: 50%;
+            position: relative;
+            p {
+                color: $white;
+                display: inline;
+                font-size: 18px;
+                margin-right: 5px;
+            }
+            svg {
+                fill: $white;
+                display: inline;
+                height: 26px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        nav {
+            display: inline-block;
+            width: 100%;
+            max-width: 50%;
+            ul {
+                text-align: right;
+                width: 100%;
+                li {
+                    &:not(:first-of-type) {
+                        margin-left: 15px;
+                    }
+                    a {
+                        svg {
+                            fill: $white;
+                            display: inline;
+                            height: 26px;
+                            transition: $tfast;
+                        }
+                        &:hover {
+                            svg {
+                                fill: $lavender;
+                            } 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

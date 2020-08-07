@@ -1,4 +1,5 @@
 .experiencias{
+    padding-bottom: 5px;
     .title{
         position: relative;
         padding: 100px 0 0 10%;
@@ -39,6 +40,9 @@
                     font-size: 18px;
                     color: $black;
                     text-decoration: underline;
+                    &:hover {
+                        color: $blue;
+                    }
                 } 
                 &:last-child{
                     padding-right: 0;   
@@ -87,16 +91,44 @@
             .col {
                 display: inline-block;
                 width: 27.5%;
+                &:nth-of-type(1){
+                    margin-top: 60px;
+                }
+                &:nth-of-type(2){
+                    margin-top: 90px;
+                }
                 div {
                     display: inline-block;
+                    left: 50%;
                     position: relative;
                     margin-bottom: 80px;
                     overflow: hidden;
                     width: 80%;
                     &:hover {
+                        h2,  p {
+                            color: $lavender!important;
+                        }
                         .thumb {
-                            mix-blend-mode: plus-lighter;
-                            // transform: scale(1.2);
+                            background-blend-mode: screen;
+                        }
+                    }
+                    &[data-align="left"]{
+                        transform: translate(-62%);
+                    }
+                    &[data-align="center"]{
+                        transform: translate(-50%);
+                    }
+                    &[data-align="right"]{
+                        transform: translate(-38%);
+                    }
+                    &[data-evento="CCB"] {
+                        p {
+                            color: $red;
+                        }
+                    }
+                    &[data-evento="Parceria"] {
+                        p {
+                            color: $blue;
                         }
                     }
                     &[data-thumb="1"]{
@@ -104,17 +136,11 @@
                             background-image: url("../img/Frontend imagens/Cartaz/Filipe_Sambado.png");
                             height: 205px;
                         }
-                        p {
-                            color: $red;
-                        }
                     }
                     &[data-thumb="2"]{
                         .thumb {
                             background-image: url("../img/Frontend imagens/Cartaz/Long_Nights.png");
                             height: 186px;
-                        }
-                        p {
-                            color: $red;
                         }
                     }
                     &[data-thumb="2"]{
@@ -122,17 +148,11 @@
                             background-image: url("../img/Frontend imagens/Cartaz/Long_Nights.png");
                             height: 194px;
                         }
-                        p {
-                            color: $red;
-                        }
                     }
                     &[data-thumb="3"]{
                         .thumb {
                             background-image: url("../img/Frontend imagens/Cartaz/Nuno_Lopes.png");
                             height: 220px;
-                        }
-                        p {
-                            color: $red;
                         }
                     }
                     &[data-thumb="4"]{
@@ -140,17 +160,11 @@
                             background-image: url("../img/Frontend imagens/Cartaz/O_futuro_da_cultura.png");
                             height: 200px;
                         }
-                        p {
-                            color: $blue;
-                        }
                     }
                     &[data-thumb="5"]{
                         .thumb {
                             background-image: url("../img/Frontend imagens/Cartaz/Sensible_Soccers.png");
                             height: 220px;
-                        }
-                        p {
-                            color: $red;
                         }
                     }
                     &[data-thumb="6"]{
@@ -158,17 +172,11 @@
                             background-image: url("../img/Frontend imagens/Cartaz/Color_men.png");
                             height: 265px;
                         }
-                        p {
-                            color: $blue;
-                        }
                     }
                     &[data-thumb="7"]{
                         .thumb {
                             background-image: url("../img/Frontend imagens/Cartaz/Crazy_tatoo.png");
                             height: 270px;
-                        }
-                        p {
-                            color: $red;
                         }
                     }
                     &[data-thumb="8"]{
@@ -176,37 +184,25 @@
                             background-image: url("../img/Frontend imagens/Cartaz/Mariana_miseravel.png");
                             height: 250px;
                         }
-                        p {
-                            color: $blue;
-                        }
                     }
                     &[data-thumb="9"]{
                         .thumb {
                             background-image: url("../img/Frontend imagens/Cartaz/Bordalo.png");
                             height: 205px;
                         }
-                        p {
-                            color: $blue;
-                        }
                     }
                     a {
                         display: inline-block;
                         width: 100%;
                         &.thumb {
+                            background-color: $blue;
                             background-size: cover;
                             background-position: center;
                             background-repeat: no-repeat;
                             position: relative;
-                            &:before {
-                                background-color: $blue;
-                                content: "";
-                                display: block;
-                                left: 0;
-                                height: 100%;
-                                position: absolute;
-                                top: 0;
-                                width: 100%;
-                                z-index: -1;
+                            transition: $tregular;
+                            &:hover {
+                                background-blend-mode: screen;
                             }
                         }
                     }
@@ -219,11 +215,13 @@
                                 font-weight: $bold;
                                 color: $black;
                                 margin-bottom: 10px; 
+                                transition: $tregular;
                             }
                             p {
                                 font-size: 12px;
                                 font-weight: $regular;
                                 font-family: $primary-font;  
+                                transition: $tregular;
                                 span {
                                     font-size: 12px;
                                     font-weight: $bold;

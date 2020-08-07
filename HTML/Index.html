@@ -68,7 +68,7 @@
 						<p>Todos os fins de semana de Janeiro</p>
 					</div>
 					<div>
-						<p>Vem surpreender-te com novas experiências...</p>
+						<h2>Vem surpreender-te com novas experiências...</h2>
 					</div>
 					<div>
 						<p><span>Um Festival interativo</span> • Uma app com eventos personalizadas Centenas de descontos e ofertas</p>
@@ -138,21 +138,21 @@
 				</ul>
 				<div class="grid">
 					<div class="col">
-						<div data-thumb="1">
+						<div data-thumb="1" data-align="center" data-evento="CCB">
 							<a href="#" class="thumb"></a>
 							<article>
 								<a href="#"><h2>Filipe Sambado</h2></a>
 								<a href="#"><p><span>Concerto</span> | Evento CCB</p></a>
 							</article>
 						</div>
-						<div data-thumb="2">
+						<div data-thumb="2" data-align="left" data-evento="CCB">
 							<a href="#" class="thumb"></a>
 							<article>
 								<a href="#"><h2>Long Nights</h2></a>
 								<a href="#"><p><span>Dj SET</span> | Evento CCB</p></a>
 							</article>
 						</div>
-						<div data-thumb="3">
+						<div data-thumb="3" data-align="right" data-evento="CCB">
 							<a href="#" class="thumb"></a>
 							<article>
 								<a href="#"><h2>Nuno Lopes</h2></a>
@@ -161,21 +161,21 @@
 						</div>
 					</div>
 					<div class="col">
-						<div data-thumb="4">
+						<div data-thumb="4" data-align="center" data-evento="Parceria">
 							<a href="#" class="thumb"></a>
 							<article>
 								<a href="#"><h2>O futuro da cultura</h2></a>
 								<a href="#"><p><span>Talk</span> | Parceria com ZDB</p></a>
 							</article>
 						</div>
-						<div data-thumb="5">
+						<div data-thumb="5" data-align="center" data-evento="CCB">
 							<a href="#" class="thumb"></a>
 							<article>
 								<a href="#"><h2>Sensible Soccers</h2></a>
 								<a href="#"><p><span>Concerto</span> | Evento CCB</p></a>
 							</article>
 						</div>
-						<div data-thumb="6">
+						<div data-thumb="6" data-align="center" data-evento="Parceria">
 							<a href="#" class="thumb"></a>
 							<article>
 								<a href="#"><h2>Color men</h2></a>
@@ -184,23 +184,23 @@
 						</div>
 					</div>
 					<div class="col">
-						<div data-thumb="7">
+						<div data-thumb="7" data-align="left" data-evento="CCB">
 							<a href="#" class="thumb"></a>
 							<article>
 								<a href="#"><h2>Crazy tatoo</h2></a>
 								<a href="#"><p><span>Arte</span> | Evento CCB</p></a>
 							</article>
 						</div>
-						<div data-thumb="8">
+						<div data-thumb="8" data-align="center" data-evento="Parceria">
 							<a href="#" class="thumb"></a>
 							<article>
 								<a href="#"><h2>Mariana, a miserável</h2></a>
 								<a href="#"><p><span>Arte</span> | Parceria Mariana</p></a>
 							</article>
 						</div>
-						<div data-thumb="9">
+						<div data-thumb="9" data-align="left" data-evento="Parceria">
 							<a href="#" class="thumb"></a>
-							<article>
+							<article >
 								<a href="#"><h2>Bordalo</h2></a>
 								<a href="#"><p><span>Street Art</span> | Galeria Galo</p></a>
 							</article>
@@ -216,26 +216,59 @@
 				<h1>Bilhetes</h2>
 			</div>
 			<div class="wrapper">
-				<img src="" alt="cartão CCB">
-				<article>
-					<h3>Cartão CCB</h3>
-					<p>Por cada bilhete oferecemos-te um cartão CCB com todas as vantagens durante um semestre ou um ano.</p>
-					<a href="#" class="btn">Ver Vantagens</a>
+				<article class="cartaoccb">
+					<div>
+						<img src="../img/Cartao-CCB.png" alt="cartão CCB">
+					</div>
+					<div>
+						<h3>Cartão CCB</h3>
+						<p>Por cada bilhete oferecemos-te um cartão CCB com todas as vantagens durante um semestre ou um ano.</p>
+						<a href="#" class="btn">Ver Vantagens</a>
+					</div>
 				</article>
-				<div class="cards">
-					<h2>Escolhe o tamanho das tuas experiências</h2>
-					<ul>
-						<li>
-							<div class="cartaoXS">
-								<a href="#">cartão XS</a>
-							</div>
-							<a href="#"><!--verificar-->
-								<p>15€</p>
-								<h4>Comprar</h4>
-							</a>
-						</li>
-					</ul>
-				</div>
+				<h2>Escolhe o tamanho das tuas experiências</h2>
+				<article class="cartoes">
+					<div class="cartao" data-cartao="xs">
+						<article>
+							<p>Acesso<br>1 fim de semana</p>
+							<p>Cartão CCB<br>(1 Semestre)</p>	
+						</article>
+						<div>
+							<p>15€</p>
+							<a>Comprar</a>
+						</div>
+					</div>
+					<div class="cartao" data-cartao="s">
+						<article>
+							<p>Acesso<br>2 fim de semana</p>
+							<p>Cartão CCB<br>(1 Ano)</p>
+						</article>
+						<div>
+							<p>30€</p>
+							<a>Comprar</a>
+						</div>
+					</div>
+					<div class="cartao" data-cartao="full">
+						<article>
+							<p>Acesso todos os fins de semana</p>
+							<p>Cartão CCB<br>(1 Semestre)</p>
+						</article>
+						<div>
+							<p>40€</p>
+							<a>Comprar</a>
+						</div>
+					</div>
+					<div class="cartao" data-cartao="xl">
+						<article>
+							<p>Acesso todos os fins de semana</p>
+							<p>Cartão CCB<br>(1 Ano)</p>
+						</article>
+						<div>
+							<p>60€</p>
+							<a>Comprar</a>
+						</div>
+					</div>
+				</article>
 			</div>
 		</section>
 		<!-- Informação -->
@@ -244,20 +277,23 @@
 				<h1>Informação</h2>
 			</div>
 			<div class="wrapper">
-				<img src="" alt="app">
+				<article>
+					<img src="../img/iphone.png" alt="app">
+					<h1>Faz match com a cultura</h1>
+					<p><span>Informação exclusiva do Festival •</span> Sugestões de eventos personalizados</p>
+					<p>Diversidade<span>•</span>Actualizações<span>•</span>Gamificação<span>•</span>Segurança<span>•</span>Descontos<span>•</span>Ofertas</span></p>
+				</article>
 				<article>
 					<h4>APP CULTURAL EXPERIENCES</h4>
-					<P>Para os que nunca estão satisfeitos, sempre à procura de novas experiências culturais.</P>
-					<p>A App cultural de referência.</p>
-					<img src="" alt="google play">
-					<img src="" alt="app store">
+					<p>Para os que nunca estão satisfeitos, sempre à procura de novas experiências culturais.</p>
+					<p><span>A App cultural de referência.</span></p>
+					<div>
+						<img src="../img/Google.png" alt="google play">
+						<img src="../img/AStore.png" alt="app store">
+					</div>
 				</article>
-				<h1>Faz match com a cultura</h1>
-				<p><span>Informação exclusiva do Festival •</span> Sugestões de eventos personalizados</p>
-				<p><span>Diversidade</span> • <span>Actualizações</span> • <span>Gamificação</span> • <span>Segurança</span> • <span>Descontos</span> • <span>Ofertas</span></p>
 			</div>
 		</section>
-		<!-- Grid -->
 		<!-- Artistas -->
 		<section class="artista" data-circle="3">
 			<div class="wrapper">
@@ -283,6 +319,17 @@
 	<!-- Footer -->
 	<footer>
 		<div class="wrapper">
+			<div>
+				<p>ALL BY</p> 
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.7 70.9"><path class="e4baeb4f-1bc6-402a-9f31-62b49a779775" d="M0,0V70.9H127.7V0ZM35.6,48.9c-7,0-15-3.5-15-13.4S27,22,35.5,22a28.2,28.2,0,0,1,7.7,1.3L42.7,29a13.2,13.2,0,0,0-6.8-1.9c-4.9,0-8.1,3.6-8.1,8.4s3.6,8.2,8.7,8.2a19.2,19.2,0,0,0,6.4-1.3l.4,5.4A28.1,28.1,0,0,1,35.6,48.9Zm32.2,0c-6.9,0-14.9-3.5-14.9-13.4S59.2,22,67.8,22a28.9,28.9,0,0,1,7.7,1.3L74.9,29a12.9,12.9,0,0,0-6.7-1.9c-5,0-8.2,3.6-8.2,8.4s3.7,8.2,8.7,8.2a19.3,19.3,0,0,0,6.5-1.3l.3,5.4A26.9,26.9,0,0,1,67.8,48.9Zm29.1-.5h-11v-26h12c4.8,0,8.4,2.2,8.4,6.6s-1.6,5.1-4.5,6.1h0c3.4.7,5.2,2.5,5.2,5.7C107,47.1,101.5,48.4,96.9,48.4ZM95,37.4H92.9v6.1h2c2.5,0,5.2-.4,5.2-3S97.4,37.4,95,37.4ZM99.4,30c0-2.4-2.2-2.6-4.5-2.6h-2v5.3h1.9C97.1,32.7,99.4,32.2,99.4,30Z" transform="translate(0 0)"/></g></svg>	
+			</div>
+			<nav>
+				<ul>
+					<li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg></a></li>
+					<li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a></li>
+					<li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg></a></li>
+				</ul>
+			</nav>
 		</div>
 	</footer>
 </body>
