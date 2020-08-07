@@ -4,3 +4,45 @@
     80%   {transform: translateY(0); opacity: 1;}
     100% {transform: translateY(-100vh); opacity: 1;}
 }
+
+
+.nova {
+    width: 100%;
+    height: 295px;
+    a {
+        display: inline-block;
+        overflow: hidden;
+        width: 100%;
+        &:nth-of-type(1) {
+            background-color: $blue;
+            background-image: url("../img/Frontend imagens/Cartaz/Filipe_Sambado.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 50%;
+        }
+        &:hover {
+            mix-blend-mode: saturation;
+        }
+    }
+    article {
+        height: 50%;
+        a {
+            background-image: "";
+            h2{
+                font-family: $secondary-font;
+                padding-top: 10px;
+                font-size: 16px;
+                font-weight: 700;
+                padding-bottom: 10px;
+                color: $black;
+            }
+            p{
+                font-size: 12px;
+                font-weight: 400;
+                color: $red;
+                font-family: $primary-font;   
+            } 
+        }
+    }
+}

@@ -113,20 +113,20 @@
                             font-family: $primary-font;   
                         }   
                     }
-                    a{
-                        position: absolute;
-                        top: 0;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        z-index: 999999;
-                        cursor: pointer;
-                        transition: all 0.3s ease;
-                        &:hover{
-                            mix-blend-mode: saturation;
-                            background: $blue;
-                        }
-                    }  
+                    // a{
+                    //     position: absolute;
+                    //     top: 0;
+                    //     bottom: 0;
+                    //     left: 0;
+                    //     right: 0;
+                    //     z-index: 999999;
+                    //     cursor: pointer;
+                    //     transition: all 0.3s ease;
+                    //     &:hover{
+                    //         mix-blend-mode: saturation;
+                    //         background: $blue;
+                    //     }
+                    // }  
                 }
     
             }
