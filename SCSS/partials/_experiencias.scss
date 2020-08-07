@@ -29,6 +29,11 @@
             padding-top: 60px;
             li{
                 padding-right: 90px;
+                &:nth-of-type(1) {
+                    a {
+                        color: $red;
+                    }
+                }
                 a{
                     font-family: $secondary-font;
                     font-size: 18px;
@@ -45,227 +50,222 @@
             width: 100%;
             padding-top: 90px;
             text-align: center;
-            
             li{
                 text-align: center;
                 min-width: 150px;
                 line-height: 35px;
                 font-size: 16px;
-                color: $blue;
+                font-weight: $bold;
                 font-family: $secondary-font;
-                color: $lavender;
                 border-style: solid;
-                border-color: $lavender;
                 border-width: 2px;
                 margin-right: 30px;
-                margin-top: 15px;             
+                margin-top: 15px; 
+                &[data-color="dark-blue"]{
+                    border-color: $dark-blue;
+                    color: $dark-blue;
+                } 
+                &[data-color="dark-red"]{
+                    border-color: $dark-red;
+                    color: $dark-red;
+                }
+                &[data-color="red"]{
+                    border-color: $red;
+                    color: $red;
+                }
+                &[data-color="lavender"]{
+                    border-color: $lavender;
+                    color: $lavender;
+                }          
             }
         }
-        .colls{
+        .grid{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 100px;
+            .col {
+                display: inline-block;
+                width: 27.5%;
+                div {
+                    display: inline-block;
+                    position: relative;
+                    margin-bottom: 80px;
+                    overflow: hidden;
+                    width: 80%;
+                    &:hover {
+                        .thumb {
+                            mix-blend-mode: plus-lighter;
+                            // transform: scale(1.2);
+                        }
+                    }
+                    &[data-thumb="1"]{
+                        .thumb {
+                            background-image: url("../img/Frontend imagens/Cartaz/Filipe_Sambado.png");
+                            height: 205px;
+                        }
+                        p {
+                            color: $red;
+                        }
+                    }
+                    &[data-thumb="2"]{
+                        .thumb {
+                            background-image: url("../img/Frontend imagens/Cartaz/Long_Nights.png");
+                            height: 186px;
+                        }
+                        p {
+                            color: $red;
+                        }
+                    }
+                    &[data-thumb="2"]{
+                        .thumb {
+                            background-image: url("../img/Frontend imagens/Cartaz/Long_Nights.png");
+                            height: 194px;
+                        }
+                        p {
+                            color: $red;
+                        }
+                    }
+                    &[data-thumb="3"]{
+                        .thumb {
+                            background-image: url("../img/Frontend imagens/Cartaz/Nuno_Lopes.png");
+                            height: 220px;
+                        }
+                        p {
+                            color: $red;
+                        }
+                    }
+                    &[data-thumb="4"]{
+                        .thumb {
+                            background-image: url("../img/Frontend imagens/Cartaz/O_futuro_da_cultura.png");
+                            height: 200px;
+                        }
+                        p {
+                            color: $blue;
+                        }
+                    }
+                    &[data-thumb="5"]{
+                        .thumb {
+                            background-image: url("../img/Frontend imagens/Cartaz/Sensible_Soccers.png");
+                            height: 220px;
+                        }
+                        p {
+                            color: $red;
+                        }
+                    }
+                    &[data-thumb="6"]{
+                        .thumb {
+                            background-image: url("../img/Frontend imagens/Cartaz/Color_men.png");
+                            height: 265px;
+                        }
+                        p {
+                            color: $blue;
+                        }
+                    }
+                    &[data-thumb="7"]{
+                        .thumb {
+                            background-image: url("../img/Frontend imagens/Cartaz/Crazy_tatoo.png");
+                            height: 270px;
+                        }
+                        p {
+                            color: $red;
+                        }
+                    }
+                    &[data-thumb="8"]{
+                        .thumb {
+                            background-image: url("../img/Frontend imagens/Cartaz/Mariana_miseravel.png");
+                            height: 250px;
+                        }
+                        p {
+                            color: $blue;
+                        }
+                    }
+                    &[data-thumb="9"]{
+                        .thumb {
+                            background-image: url("../img/Frontend imagens/Cartaz/Bordalo.png");
+                            height: 205px;
+                        }
+                        p {
+                            color: $blue;
+                        }
+                    }
+                    a {
+                        display: inline-block;
+                        width: 100%;
+                        &.thumb {
+                            background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            position: relative;
+                            &:before {
+                                background-color: $blue;
+                                content: "";
+                                display: block;
+                                left: 0;
+                                height: 100%;
+                                position: absolute;
+                                top: 0;
+                                width: 100%;
+                                z-index: -1;
+                            }
+                        }
+                    }
+                    article {
+                        padding: 10px 0 10px;
+                        a {
+                            h2 {
+                                font-family: $secondary-font;
+                                font-size: 16px;
+                                font-weight: $bold;
+                                color: $black;
+                                margin-bottom: 10px; 
+                            }
+                            p {
+                                font-size: 12px;
+                                font-weight: $regular;
+                                font-family: $primary-font;  
+                                span {
+                                    font-size: 12px;
+                                    font-weight: $bold;
+                                }
+                            } 
+                        }
+                    }
+                }    
+            }
+        }
+        .btn {
+            color: $blue;
+            display: inline-block;
+            font-family: $secondary-font;
+            font-size: 18px;
+            font-weight: $bold;
+            left: 50%;
+            padding: 15px 0;
             text-align: center;
-            transform: translateY(-50%);
-            padding-top: 1200px;
-            .coll_1{
-                vertical-align: top;
+            transition: $tfast;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            position: relative;
+            transform: translate(-50%);
+            width: 250px;
+            &:before {
+                background: $blue;
+                content: "";
                 display: inline-block;
-                width: 25%;
-                div{
-                    padding-bottom: 100px;
-                    height: 295px;
-                    // text-align: center;
-                    position: relative;
-                    img{
-                        object-fit: cover;
-                        width: 100%;
-                        height: 100%;
-                        object-position: top;
-                    }
-                    &::after{
-                        position: absolute;
-                        top: 0;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        z-index: 999999;
-                        cursor: pointer;
-                        transition: all 0.3s ease;
-                        &:hover{
-                            mix-blend-mode: saturation;
-                            background: $blue;
-                        }
-    
-                    }
-                    article{
-                        position: absolute;
-                        width: 100%;
-                        h2{
-                            font-family: $secondary-font;
-                            // padding-top: 10px;
-                            font-size: 16px;
-                            font-weight: 700;
-                            // padding-bottom: 10px;
-                            color: $black;
-                        }
-                        p{
-                            font-size: 12px;
-                            font-weight: 400;
-                            color: $red;
-                            font-family: $primary-font;   
-                        }   
-                    }
-                    // a{
-                    //     position: absolute;
-                    //     top: 0;
-                    //     bottom: 0;
-                    //     left: 0;
-                    //     right: 0;
-                    //     z-index: 999999;
-                    //     cursor: pointer;
-                    //     transition: all 0.3s ease;
-                    //     &:hover{
-                    //         mix-blend-mode: saturation;
-                    //         background: $blue;
-                    //     }
-                    // }  
-                }
-    
+                width: 8px;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                transition: $tfast;
+                z-index: -1;
             }
-            .coll_2{
-                padding-top: 40px;
-                vertical-align: top;
-                display: inline-block;
-                width: 25%;
-                margin-left: 50px;
-                div{
-                    padding-bottom: 100px;
-                    height: 295px;
-                    text-align: center;
-                    position: relative;
-                    img{
-                        object-fit: cover;
-                        width: 100%;
-                        height: 100%;
-                        object-position: top;
-                    }
-                    &::after{
-                        position: absolute;
-                        top: 0;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        z-index: 999999;
-                        cursor: pointer;
-                        transition: all 0.3s ease;
-                        &:hover{
-                            mix-blend-mode: saturation;
-                            background: $blue;
-                        }
-    
-                    }
-                    article{
-                        position: absolute;
-                        width: 100%;
-                        h2{
-                            font-family: $secondary-font;
-                            padding-top: 10px;
-                            font-size: 16px;
-                            font-weight: 700;
-                            padding-bottom: 10px;
-                            color: $black;
-                        }
-                        p{
-                            font-size: 12px;
-                            font-weight: 400;
-                            color: $red;
-                            font-family: $primary-font;   
-                        }   
-                    }
-                    a{
-                        position: absolute;
-                        top: 0;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        z-index: 999999;
-                        cursor: pointer;
-                        transition: all 0.3s ease;
-                        &:hover{
-                            mix-blend-mode: saturation;
-                            background: $blue;
-                        }
-                    }  
+            &:hover {
+                color: $white;
+                &:before {
+                    width: 100%;
                 }
-    
             }
-            .coll_3{
-                vertical-align: top;
-                display: inline-block;
-                width: 25%;
-                margin-left: 50px;
-                div{
-                    padding-bottom: 100px;
-                    height: 295px;
-                    text-align: center;
-                    position: relative;
-                    
-                    img{
-                        object-fit: cover;
-                        width: 100%;
-                        height: 100%;
-                        object-position: top;
-                    }
-                    &::after{
-                        position: absolute;
-                        top: 0;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        z-index: 999999;
-                        cursor: pointer;
-                        transition: all 0.3s ease;
-                        &:hover{
-                            mix-blend-mode: saturation;
-                            background: $blue;
-                        }
-    
-                    }
-                    article{
-                        position: absolute;
-                        width: 100%;
-                        h2{
-                            font-family: $secondary-font;
-                            padding-top: 10px;
-                            font-size: 16px;
-                            font-weight: 700;
-                            padding-bottom: 10px;
-                            color: $black;
-                        }
-                        p{
-                            font-size: 12px;
-                            font-weight: 400;
-                            color: $red;
-                            font-family: $primary-font;   
-                        }   
-                    }
-                    a{
-                        position: absolute;
-                        top: 0;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        z-index: 999999;
-                        cursor: pointer;
-                        transition: all 0.3s ease;
-                        &:hover{
-                            mix-blend-mode: saturation;
-                            background: $blue;
-                        }
-                    }  
-                }
-    
-            }
-        }
-
-        
+        }        
     }
 }
