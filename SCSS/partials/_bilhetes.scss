@@ -70,7 +70,7 @@
                     width: 20%;
                     &[data-cartao="xs"]{
                         article{
-                            background-image: url("../img/Frontend imagens/Bolas/Rectangle 86.png");
+                            background-image: url("../img/Bolas/Rectangle 86.png");
                             &:after {
                                 content: "XS";
                             }
@@ -78,7 +78,7 @@
                     }
                     &[data-cartao="s"]{
                         article{
-                            background-image: url("../img/Frontend imagens/Bolas/photo-of-woman-dancing-4632091.png");
+                            background-image: url("../img/Bolas/photo-of-woman-dancing-4632091.png");
                             &:after {
                                 content: "S";
                             }
@@ -87,7 +87,7 @@
                     &[data-cartao="full"]{
                         width: 25%;
                         article{
-                            background-image: url("../img/Frontend imagens/Bolas/Rectangle 11.png");
+                            background-image: url("../img/Bolas/Rectangle 11.png");
                             padding: 130px 20px;
                             &:after {
                                 content: "FULL EXPERIENCE";
@@ -101,7 +101,7 @@
                     }
                     &[data-cartao="xl"]{
                         article{
-                            background-image: url("../img/Frontend imagens/Cartaz/Long_Nights.png");
+                            background-image: url("../img/Cartaz/Long_Nights.png");
                             &:after {
                                 content: "XL";
                             }
