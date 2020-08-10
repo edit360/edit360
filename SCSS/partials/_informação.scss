@@ -15,29 +15,6 @@
         position: absolute;
         z-index: -1;
     }
-    .title {
-        position: relative;
-        padding-left: 10%;
-        z-index: 0;
-        h1{
-            display: table;
-            padding: 15px;
-            background-color: $white;
-            color: $lavender;
-            font-family: $secondary-font;
-            font-size: 36px;
-            font-weight: $bold;
-            &:before{
-                content: "";
-                z-index: -1;
-                border: 1px solid $lavender;
-                position: absolute;
-                width: 100%;
-                left: 0;
-                bottom: 30px;
-            }
-        }
-    }
     .wrapper {
         align-items: center;
         display: flex;
@@ -47,14 +24,6 @@
                 width: 60%;
                 img {
                     width: 100%;
-                }
-                h1 {
-                    color: $white;
-                    font-family: $secondary-font;
-                    font-size: 48px;
-                    font-weight: $bold;
-                    margin-bottom: 30px;
-                    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 }
                 p {
                     color: $white;

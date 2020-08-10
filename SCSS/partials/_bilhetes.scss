@@ -1,7 +1,7 @@
 .bilhetes {
     background-attachment: fixed;
     background-color: $white;
-    background-image: url("../img/fundo_base.png");
+    background-image: url("../img/CCB-Gradient.png");
     background-position: top;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -18,29 +18,6 @@
         width: 100%;
         z-index: 0;
         position: absolute;
-    }
-    .title {
-        position: relative;
-        padding-left: 10%;
-        z-index: 0;
-        h1{
-            display: table;
-            padding: 15px;
-            background-color: $white;
-            color: $lavender;
-            font-family: $secondary-font;
-            font-size: 36px;
-            font-weight: 700;
-            &:before{
-                content: "";
-                z-index: -1;
-                border: 1px solid $lavender;
-                position: absolute;
-                width: 100%;
-                left: 0;
-                bottom: 30px;
-            }
-        }
     }
     .wrapper {
         position: relative;
@@ -76,48 +53,6 @@
                             font-size: 18px;
                             line-height: $primary-line-height;                            
                             margin-bottom: 70px;
-                        }
-                        .btn {
-                            color: $blue;
-                            display: inline-block;
-                            font-family: $secondary-font;
-                            font-size: 18px;
-                            font-weight: $bold;
-                            padding: 15px 0;
-                            text-align: center;
-                            transition: $tfast;
-                            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                            position: relative;
-                            width: 250px;
-                            &:before {
-                                background: $blue;
-                                content: "";
-                                display: inline-block;
-                                width: 8px;
-                                height: 100%;
-                                position: absolute;
-                                left: 0;
-                                top: 0;
-                                transition: $tfast;
-                                z-index: -1;
-                            }
-                            &:after {
-                                background: $white;
-                                content: "";
-                                display: inline-block;
-                                width: 100%;
-                                height: 100%;
-                                position: absolute;
-                                left: 0;
-                                top: 0;
-                                z-index: -2;
-                            }
-                            &:hover {
-                                color: $white;
-                                &:before {
-                                    width: 100%;
-                                }
-                            }
                         }
                     }
                 }
@@ -156,7 +91,7 @@
                             padding: 130px 20px;
                             &:after {
                                 content: "FULL EXPERIENCE";
-                                background-image: url("../img/fundo_base.png");
+                                background-image: url("../img/CCB-Gradient.png");
                                 background-position: top left;
                                 background-repeat: no-repeat;
                                 background-size: 300%;
@@ -251,15 +186,6 @@
                     }
                 }
             }
-        }
-        h2 {
-            color: $white;
-            font-family: $secondary-font;
-            font-weight: $bold;
-            font-size: 48px;
-            text-align: center;
-            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            width: 100%;
         }
     }
 }

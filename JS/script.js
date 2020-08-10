@@ -48,11 +48,11 @@ $(document).ready(function() {
 
     //Scroll Down
     $("#scroll").click(function() {
-        let height = $('.hero .wrapper article').outerHeight() - 76;
+        let height = $('.cultura').outerHeight() - 76;
         $('html, body').animate({scrollTop: height}, 800);
     });
 
-
+    
     //Form
     $(".add").click(function() {
         $("form").css("display", "block");
@@ -63,15 +63,5 @@ $(document).ready(function() {
     $(formClose).click(function() {
         $("form").css("display", "none");
     });
-
-
-    //Progress Bar
-    $(window).scroll(function() {
-
-        let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        let scrolled = (winScroll / height) * 100;
     
-        document.querySelector("#progressBar").style.height = scrolled + "%";
-    });
 });
