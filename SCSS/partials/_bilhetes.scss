@@ -8,6 +8,9 @@
     height: 100%;
     padding-top: 150px;
     position: relative;
+    @media #{$xs}{
+		padding-top: 50px;
+	}
     &:before {
         background: $white;
         content: "";
@@ -18,20 +21,30 @@
         width: 100%;
         z-index: 0;
         position: absolute;
+        @media #{$xs}{
+            padding-top: 120px;
+        }   
     }
     .wrapper {
         position: relative;
         z-index: 1;
+        padding: 0 30px 0 30px;
         article {
             &.cartaoccb {
                 align-items: center;
                 display: flex;
+                @media #{$xs}{
+                    display: block;
+                } 
                 justify-content: center;
                 width: 100%;
                 div {
                     display: inline-block;
                     &:nth-of-type(1) {
                         width: 60%;
+                        @media #{$xs}{
+                            width: 100%;
+                        }
                         img {
                             width: 100%;
                             height: auto;
@@ -39,6 +52,9 @@
                     }
                     &:nth-of-type(2) {
                         width: 40%;
+                        @media #{$xs}{
+                            width: 100%;
+                        } 
                         h3 {
                             font-family: $secondary-font;
                             font-weight: $regular;
@@ -46,6 +62,10 @@
                             line-height: $primary-line-height;    
                             margin-bottom: 30px;                        
                             text-decoration-line: underline;
+                            @media #{$xs}{
+                                font-size: 15px;
+                                margin-bottom: 10px;
+                            }   
                         }
                         p {
                             font-family: $secondary-font;
@@ -53,6 +73,10 @@
                             font-size: 18px;
                             line-height: $primary-line-height;                            
                             margin-bottom: 70px;
+                            @media #{$xs}{
+                                font-size: 15px;
+                                margin-bottom: 50px;
+                            }
                         }
                     }
                 }
