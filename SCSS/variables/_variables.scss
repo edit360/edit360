@@ -29,3 +29,10 @@ $dark-red: #782F3B;
 $tfast: all .2s ease;
 $tregular: all .5s ease;
 $tslow: all 1s ease;
+
+// Media Queries
+$xs: 'screen and (max-width: 320px)';
+$s: 'screen and (max-width: 512px) and (min-width: 321px)';
+$m: 'screen and (max-width: 768px) and (min-width: 513px)';
+$l: 'screen and (max-width: 1024px) and (min-width: 769px)';
+$xl: 'screen and (max-width: 1289px) and (min-width: 1025px)';
