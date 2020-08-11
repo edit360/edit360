@@ -39,7 +39,7 @@ header {
                 transform: translateY(-50%);
             }
         }
-        nav {
+        .menu {
             display: inline-block;
             width: 100%;
             max-width: 50%;
@@ -59,6 +59,48 @@ header {
                             color: $blue;
                         }
                     }
+                }
+            }
+        }
+        .menu-mobile {
+            display: block;
+            height: 18px;
+            overflow: hidden;
+            position: absolute;
+            right: 0;
+            width: 18px;
+            &:before{
+                background: $black;
+                content: "";
+                display: block;
+                height: 1px;
+                position: absolute;
+                right: 0;
+                top: calc(50% - 4px);
+                transform: translateY(-50%);
+                transition: $tfast;
+                width: 100%;
+            }
+            &:after{
+                background: $black;
+                bottom: calc(50% - 4px);;
+                content: "";
+                display: block;
+                height: 1px;
+                position: absolute;
+                right: 0;
+                transform: scaleX(1) translateY(-50%);
+                transition: $tfast;
+                width: 100%;
+            }
+            &:hover{
+                &:before{
+                    background: $white;
+                    width: 80%;
+                }
+                &:after {
+                    background: $white;
+                    opacity: 1;
                 }
             }
         }
