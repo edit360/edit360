@@ -24,10 +24,13 @@ $(document).ready(function() {
     $('.circle').click(function(){
         let value = $(this).data('circle');
 
+        //Abrir Section Artistas
+        $('.artistas').addClass('open');
+
         $('.artista').each(function(){
             if (value == $(this).data('circle')){
-                //Abrir
-                $(this).addClass('open');
+                //Mostrar Artigo Correspondente
+                $(this).css("visibility", "initial");
                 //Retirar Background do header
                 $("header").css("background-image", "none");
                 //Impedir scroll
@@ -36,9 +39,11 @@ $(document).ready(function() {
         });
     });
     //Fechar
-    $('.artista a').click(function(){
-        //Fechar
-        $('.artista').removeClass('open');
+    $('.artistas .close a').click(function(){
+        //Fechar Section Artistas
+        $('.artistas').removeClass('open');
+        //Esconder Artigo Correspondente
+        $('.artista').css("visibility", "hidden");
         //Repor Background do header
         $("header").css("background-image", "url(../img/fundo_base.png)");
         //Permitir scroll
