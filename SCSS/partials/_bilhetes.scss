@@ -8,9 +8,6 @@
     height: 100%;
     padding-top: 150px;
     position: relative;
-    @media #{$xs}{
-		padding-top: 50px;
-	}
     &:before {
         background: $white;
         content: "";
@@ -22,13 +19,12 @@
         z-index: 0;
         position: absolute;
         @media #{$xs}{
-            padding-top: 120px;
+            height: 530px;
         }   
     }
     .wrapper {
         position: relative;
         z-index: 1;
-        padding: 0 30px 0 30px;
         article {
             &.cartaoccb {
                 align-items: center;
@@ -89,9 +85,17 @@
                 margin-bottom: 50px;
                 margin-top: 75px;
                 width: 100%;
+                @media #{$xs}{
+                    display: block;
+                    align-items: center;
+                    
+                } 
                 .cartao {
                     height: 100%;
                     width: 20%;
+                    @media #{$xs}{
+                        width: 70%;
+                    }
                     &[data-cartao="xs"]{
                         article{
                             background-image: url("../img/Bolas/Rectangle 86.png");
