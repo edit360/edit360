@@ -10,7 +10,7 @@
     transition: $tslow;
     width: 100%;
     z-index: 1;
-    &.open {
+    &.show {
         left: 0;
     }
     .wrapper {

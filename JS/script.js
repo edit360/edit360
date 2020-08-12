@@ -1,47 +1,69 @@
 $(document).ready(function() {
 
-    //Titulo Cortado
+    //Menu
+    $('.menu-mobile').click(function(){
+        if($('.menu').hasClass("open")){
+            //Fechar Menu
+            // Remover class Open
+            $('.menu').removeClass('open');
+            $('.menu-mobile').removeClass('close');
+            // Permitir Scroll
+            document.body.style.overflow = "auto";
+        }
+        else {
+            //Abrir Menu
+            // Adicionar class Opened
+            $('.menu').addClass('open');
+            $('.menu-mobile').addClass('close');
+            // Impedir Scroll
+            document.body.style.overflow = "hidden";
+        }
+    });
+
+
+    //Titulo CULTURA
     left();
     window.addEventListener('resize', left);
 
     function left() {
-        let offset = $( ".hero .wrapper" ).offset();
+        
+        //Largura do H1
         let largura = document.querySelector('.left h1').offsetWidth;
+        //Aplicar a largura do H1 ao pai
         document.querySelector(".left").style.width = largura + "px";
 
-        if (window.innerWidth >= 1409) {
-            let left = offset.left + 10;
-            document.querySelector(".left").style.left = "-" + left + "px";
-        }
-        else {
-            let left = offset.left + 70;
-            document.querySelector(".left").style.left = "-" + left + "px";
-        }
+        //Offset do Wrapper 
+        let offset = $( ".hero .wrapper" ).offset();
+        //Padding do Wrapper 
+        let padding = $( ".hero .wrapper" ).css('padding-left');
+        //Distancia da Esquerda
+        document.querySelector(".left").style.left = "-" + offset.left + padding + "px";
     }
 
-    //Página de artistas
+
+    //Página de Artistas
     //Abrir
     $('.circle').click(function(){
         let value = $(this).data('circle');
 
         //Abrir Section Artistas
-        $('.artistas').addClass('open');
+        $('.artistas').addClass('show');
+        //Retirar Background do header
+        $("header").css("background-image", "none");
+        //Impedir scroll
+        document.body.style.overflow = "hidden";
 
         $('.artista').each(function(){
             if (value == $(this).data('circle')){
                 //Mostrar Artigo Correspondente
                 $(this).css("visibility", "initial");
-                //Retirar Background do header
-                $("header").css("background-image", "none");
-                //Impedir scroll
-                document.body.style.overflow = "hidden";
             }
         });
     });
     //Fechar
     $('.artistas .close a').click(function(){
         //Fechar Section Artistas
-        $('.artistas').removeClass('open');
+        $('.artistas').removeClass('show');
         //Esconder Artigo Correspondente
         $('.artista').css("visibility", "hidden");
         //Repor Background do header

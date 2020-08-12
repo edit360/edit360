@@ -3,7 +3,7 @@ header {
     background-image: url(../img/CCB-Gradient.png);
     background-position: top;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     border-bottom: 1px solid $white;
     padding: 20px 0;
     position: fixed;
@@ -32,7 +32,6 @@ header {
                 margin: 0 5px;
             }
             svg {
-                display: inline;
                 height: 26px;
                 position: absolute;
                 top: 50%;
@@ -43,38 +42,42 @@ header {
             display: inline-block;
             width: 100%;
             max-width: 50%;
-            @media #{$xs}{
-                background: $blue;
-                height: 100vh;
-                left: 0;
-                position: absolute;
-                max-width: 100%;
-                top: 0;
-                ul {
-                    text-align: center;
-                    li {
-                        width: 100%;
-                        &:not(:first-of-type) {
-                            margin-left: 0px;
-                        }
-                    }
-                }
-            }
+            transition: $tslow;
             ul {
                 text-align: right;
                 width: 100%;
-
                 li {
                     &:not(:first-of-type) {
                         margin-left: 30px;
                     }
-
                     a {
                         color: $black;
                         font-size: 18px;
                         font-weight: $bold;
                         &:hover {
                             color: $blue;
+                        }
+                    }
+                }
+            }
+            @media #{$xs}{
+                align-items: center;
+                background: $blue;
+                display: flex;
+                height: 100vh;
+                left: 0;
+                position: absolute;
+                max-width: 100%;
+                top: -100vh;
+                &.open {
+                    top: 0;
+                }
+                ul {
+                    text-align: center;
+                    li {
+                        width: 100%;
+                        &:not(:first-of-type) {
+                            margin-left: 0px;
                         }
                     }
                 }
@@ -119,6 +122,29 @@ header {
                 &:after {
                     background: $white;
                     opacity: 1;
+                }
+            }
+            &.close {
+                &:before{
+                    background: $black;
+                    position: absolute;
+                    top: 50%;
+                    transform: rotate(45deg)translateY(-50%);										
+                }
+                &:after{
+                    background: $black;
+                    position: absolute;
+                    top: 50%;
+                    transform: rotate(-45deg)translateY(-50%);
+                }
+                &:hover{
+                    &:before{
+                        background: $white;
+                        width: 100%;
+                    }
+                    &:after{
+                        background: $white;
+                    }
                 }
             }
         }
