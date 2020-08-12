@@ -70,121 +70,36 @@
                 }          
             }
         }
-        .grid{
+        .grid {
+            display: grid;
+            grid-gap: 80px;
+            grid-template-columns: repeat(3,[col] 1fr);
             width: 100%;
-            display: flex;
-            justify-content: space-between;
-            margin-top: 100px;
-            .col {
-                display: inline-block;
-                width: 27.5%;
-                &:nth-of-type(1){
-                    margin-top: 60px;
-                }
-                &:nth-of-type(2){
-                    margin-top: 90px;
-                }
+            .cell {
+                width: 100%;
+                position: relative;
                 div {
-                    display: inline-block;
-                    left: 50%;
-                    position: relative;
-                    margin-bottom: 80px;
-                    overflow: hidden;
                     width: 80%;
-                    &:hover {
-                        h2,  p {
-                            color: $lavender!important;
-                        }
-                        .thumb {
-                            background-blend-mode: screen;
-                        }
-                    }
-                    &[data-align="left"]{
-                        transform: translate(-62%);
-                    }
-                    &[data-align="center"]{
-                        transform: translate(-50%);
-                    }
-                    &[data-align="right"]{
-                        transform: translate(-38%);
-                    }
-                    &[data-evento="CCB"] {
-                        p {
-                            color: $red;
-                        }
-                    }
-                    &[data-evento="Parceria"] {
-                        p {
-                            color: $blue;
-                        }
-                    }
-                    &[data-thumb="1"]{
-                        .thumb {
-                            background-image: url("../img/Cartaz/Filipe-Sambado.png");
-                            height: 205px;
-                        }
-                    }
-                    &[data-thumb="2"]{
-                        .thumb {
-                            background-image: url("../img/Cartaz/Long-Nights.png");
-                            height: 186px;
-                        }
-                    }
-                    &[data-thumb="3"]{
-                        .thumb {
-                            background-image: url("../img/Cartaz/Nuno-Lopes.png");
-                            height: 220px;
-                        }
-                    }
-                    &[data-thumb="4"]{
-                        .thumb {
-                            background-image: url("../img/Cartaz/Futuro-Cultura.png");
-                            height: 200px;
-                        }
-                    }
-                    &[data-thumb="5"]{
-                        .thumb {
-                            background-image: url("../img/Cartaz/Sensible-Soccers.png");
-                            height: 220px;
-                        }
-                    }
-                    &[data-thumb="6"]{
-                        .thumb {
-                            background-image: url("../img/Cartaz/Color-Men.png");
-                            height: 265px;
-                        }
-                    }
-                    &[data-thumb="7"]{
-                        .thumb {
-                            background-image: url("../img/Cartaz/Crazy-Tatoo.png");
-                            height: 270px;
-                        }
-                    }
-                    &[data-thumb="8"]{
-                        .thumb {
-                            background-image: url("../img/Cartaz/Mariana-Miseravel.png");
-                            height: 250px;
-                        }
-                    }
-                    &[data-thumb="9"]{
-                        .thumb {
-                            background-image: url("../img/Cartaz/Bordalo.png");
-                            height: 205px;
-                        }
-                    }
-                    a {
+                    margin: 0 auto;
+                    //Alinhamento
+                    &[data-align="left"]{margin-left: 0;}
+                    &[data-align="right"]{margin-right: 0;}
+                    //Cor de texto
+                    &[data-evento="CCB"] {p {color: $red;}}
+                    &[data-evento="Parceria"] {p {color: $blue;}}
+                    .thumb {
+                        background-color: $blue;
                         display: inline-block;
+                        height: 200px;     
+                        overflow: hidden;           
+                        transition: $tregular;
                         width: 100%;
-                        &.thumb {
-                            background-color: $blue;
-                            background-size: cover;
-                            background-position: center;
-                            background-repeat: no-repeat;
-                            position: relative;
+                        img {
+                            height: 100%;
+                            min-height: 100%;
+                            min-width: 100%;
                             transition: $tregular;
-                            &:hover {
-                                background-blend-mode: screen;
-                            }
+                            width: 100%;
                         }
                     }
                     article {
@@ -210,8 +125,22 @@
                             } 
                         }
                     }
-                }    
+                    &:hover {
+                        .thumb {
+                            img {
+                                mix-blend-mode: plus-lighter;
+                            }
+                        }
+                        article {
+                            a {
+                                h2, p {
+                                    color: $lavender;
+                                }
+                            }
+                        }
+                    }
+                }
             }
-        }       
+        }      
     }
 }

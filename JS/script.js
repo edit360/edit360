@@ -33,11 +33,13 @@ $(document).ready(function() {
         document.querySelector(".left").style.width = largura + "px";
 
         //Offset do Wrapper 
-        let offset = $( ".hero .wrapper" ).offset();
+        let offset = $( ".hero .wrapper" ).offset().left;
         //Padding do Wrapper 
-        let padding = $( ".hero .wrapper" ).css('padding-left');
+        let padding = parseInt($( ".hero .wrapper" ).css('padding-left'));
         //Distancia da Esquerda
-        document.querySelector(".left").style.left = "-" + offset.left + padding + "px";
+        let left = offset + padding + 10;
+        //Aplicar
+        document.querySelector(".left").style.left = "-" + left + "px";
     }
 
 
