@@ -58,7 +58,7 @@ $(document).ready(function() {
         $('.artista').each(function(){
             if (value == $(this).data('circle')){
                 //Mostrar Artigo Correspondente
-                $(this).css("visibility", "initial");
+                $(this).css("display", "flex");
             }
         });
     });
@@ -67,7 +67,7 @@ $(document).ready(function() {
         //Fechar Section Artistas
         $('.artistas').removeClass('show');
         //Esconder Artigo Correspondente
-        $('.artista').css("visibility", "hidden");
+        $('.artista').css("display", "none");
         //Repor Background do header
         $("header").css("background-image", "url(../img/fundo_base.png)");
         //Permitir scroll

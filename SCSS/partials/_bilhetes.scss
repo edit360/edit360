@@ -94,7 +94,7 @@
                     height: 100%;
                     width: 20%;
                     @media #{$xs}{
-                        width: 70%;
+                        width: 100%!important;
                     }
                     &[data-cartao="xs"]{
                         article{
@@ -194,6 +194,10 @@
                         justify-content: space-between;
                         padding: 35px 0 5px;
                         width: 100%;
+                        @media #{$xs}{
+                            padding: 15px 0 5px;
+                            margin-bottom: 50px;
+                        }
                         p {
                             color: $white;
                             display: inline-block;
