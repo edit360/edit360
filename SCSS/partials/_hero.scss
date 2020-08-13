@@ -19,12 +19,27 @@
                 pointer-events: none;
                 width: 100%;
                 z-index: 1;
+                @media #{$m} {
+                    max-width: 75%;
+                }
+                @include mq(0,768px) {
+                    max-width: 100%;
+                }
                 p {
                     color: $white;
                     font-family: $secondary-font;
                     font-size: 24px;
                     line-height: $primary-line-height;
                     text-align: left;
+                    @media #{$m} {
+                        font-size: 20px;
+                    }
+                    @media #{$s} {
+                        font-size: 18px;
+                    }
+                    @media #{$xs} {
+                        font-size: 16px;
+                    }
                     span {
                         font-size: inherit;
                         text-decoration: underline;
@@ -41,6 +56,18 @@
                         display: inline-block;
                         font-family: $secondary-font;
                         font-size: 96px;
+                        @media #{$l} {
+                            font-size: 86px;
+                        }
+                        @media #{$m} {
+                            font-size: 74px;
+                        }
+                        @media #{$s} {
+                            font-size: 62px;
+                        }
+                        @media #{$xs} {
+                            font-size: 50px;
+                        }
                     }
                     h2 {
                         color: $white;
@@ -48,6 +75,15 @@
                         font-family: $secondary-font;
                         font-size: 18px;
                         text-align: right;
+                        @media #{$m} {
+                            font-size: 16px;
+                        }
+                        @media #{$s} {
+                            font-size: 14px;
+                        }
+                        @media #{$xs} {
+                            font-size: 12px;
+                        }
                     }
                 }
             }
@@ -82,6 +118,18 @@
                             font-size: 45px;
                             font-weight: $bold;
                             margin-right: 30px;
+                            @media #{$l} {
+                                font-size: 40px;
+                            }
+                            @media #{$m} {
+                                font-size: 36px;
+                            }
+                            @media #{$s} {
+                                font-size: 29px;
+                            }
+                            @media #{$xs} {
+                                font-size: 22px;
+                            }
                         }
                         p {
                             color: $white;
@@ -94,6 +142,12 @@
                     &:nth-of-type(2) {
                         margin-bottom: 50px;
                         max-width: 60%;
+                        @media #{$m} {
+                            max-width: 80%;
+                        }
+                        @include mq(0,768px) {
+                            max-width: 100%;
+                        }
                     }
                     &:nth-of-type(3) {
                         max-width: 100%;
@@ -213,10 +267,22 @@
                         background: $black;
                         border-radius: 50%;
                         cursor: pointer;
-                        height: 4.5vw;                        
+                        height: 5vw;                        
                         position: absolute;
                         transition: $tregular;
-                        width: 4.5vw;
+                        width: 5vw;
+                        @media #{$m} {
+                            height: 6.5vw;
+                            width: 6.5vw;
+                        }
+                        @media #{$s} {
+                            height: 8.5vw;
+                            width: 8.5vw;
+                        }
+                        @media #{$xs} {
+                            height: 10vw;
+                            width: 10vw;
+                        }
                         &:before {
                             content: "";
                             background: $white;
@@ -228,14 +294,14 @@
                             transform-origin: 0 0;
                             transition: $tregular;
                             top: 50%;
-                            width: 2vw;
+                            width: 40%;
                         }
                         &:after {
                             content: "";
                             background: $white;
                             display: block;
                             left: 50%;
-                            height: 2vw;
+                            height: 40%;
                             position: absolute;
                             transform: translate(-50%, -50%);
                             transform-origin: 0 0;
@@ -275,6 +341,18 @@
                         right: 5vw;
                         width: 5vw;
                         z-index: 1;
+                        @media #{$m} {
+                            height: 6.5vw;
+                            width: 6.5vw;
+                        }
+                        @media #{$s} {
+                            height: 8.5vw;
+                            width: 8.5vw;
+                        }
+                        @media #{$xs} {
+                            height: 10vw;
+                            width: 10vw;
+                        }
                         svg {
                             height: 30px;
                             left: 50%;
@@ -282,6 +360,15 @@
                             transform: translate(-50%, -50%);
                             transition: $tregular;
                             top: 50%;
+                            @media #{$m} {
+                                height: 26px;
+                            }
+                            @media #{$s} {
+                                height: 22px;
+                            }
+                            @media #{$xs} {
+                                height: 18px;
+                            }
                         }
                         .wave {
                             opacity: 1;

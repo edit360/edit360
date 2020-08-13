@@ -15,6 +15,15 @@ footer {
                 display: inline;
                 font-size: 18px;
                 margin-right: 10px;
+                @media #{$m} {
+                    font-size: 16px;
+                }
+                @media #{$s} {
+                    font-size: 14px;
+                }
+                @media #{$xs} {
+                    font-size: 12px;
+                }
             }
             svg {
                 fill: $white;
@@ -22,6 +31,15 @@ footer {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
+                @media #{$m} {
+                    height: 24px;
+                }
+                @media #{$s} {
+                    height: 22px;
+                }
+                @media #{$xs} {
+                    height: 20px;
+                }
             }
         }
         nav {
@@ -34,13 +52,30 @@ footer {
                 li {
                     &:not(:first-of-type) {
                         margin-left: 20px;
+                        @media #{$m} {
+                            height: 16px;
+                        }
+                        @media #{$s} {
+                            height: 13px;
+                        }
+                        @media #{$xs} {
+                            margin-left: 10px;
+                        }
                     }
                     a {
                         svg {
                             fill: $white;
-                            display: inline;
                             height: 26px;
                             transition: $tfast;
+                            @media #{$m} {
+                                height: 24px;
+                            }
+                            @media #{$s} {
+                                height: 22px;
+                            }
+                            @media #{$xs} {
+                                height: 20px;
+                            }
                         }
                         &:hover {
                             svg {

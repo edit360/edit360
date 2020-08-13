@@ -18,10 +18,22 @@ header {
             width: 100%;
             max-width: 50%;
             z-index: 1;
+            @include mq(0,768px) {
+                max-width: 90%;
+            }
             a {
                 color: $black;
                 font-size: 18px;
                 font-weight: $bold;
+                @media #{$m} {
+                    font-size: 16px;
+                }
+                @media #{$s} {
+                    font-size: 14px;
+                }
+                @media #{$xs} {
+                    font-size: 12px;
+                }
                 &:hover {
                     color: $blue;
                 }
@@ -31,12 +43,31 @@ header {
                 display: inline;
                 font-size: 18px;
                 margin: 0 5px;
+                @media #{$m} {
+                    font-size: 16px;
+                }
+                @media #{$s} {
+                    font-size: 14px;
+                }
+                @media #{$xs} {
+                    font-size: 12px;
+                    margin: 0 4px;
+                }
             }
             svg {
                 height: 26px;
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
+                @media #{$m} {
+                    height: 24px;
+                }
+                @media #{$s} {
+                    height: 22px;
+                }
+                @media #{$xs} {
+                    height: 20px;
+                }
             }
         }
         .menu {
@@ -50,23 +81,30 @@ header {
                 li {
                     &:not(:first-of-type) {
                         margin-left: 30px;
+                        @media #{$l} {
+                            margin-left: 20px;
+                        }
                     }
                     a {
                         color: $black;
                         font-size: 18px;
                         font-weight: $bold;
+                        @media #{$m} {
+                            font-size: 16px;
+                        }
                         &:hover {
                             color: $blue;
                         }
                     }
                 }
             }
-            @media #{$xs}{
+            @include mq(0,768px){
                 align-items: center;
                 background: $blue;
                 display: flex;
                 height: 100vh;
                 left: 0;
+                padding: 50px;
                 position: absolute;
                 max-width: 100%;
                 top: -100vh;
@@ -74,25 +112,46 @@ header {
                     top: 0;
                 }
                 ul {
-                    text-align: center;
+                    text-align: left;
                     li {
                         width: 100%;
                         &:not(:first-of-type) {
                             margin-left: 0px;
                         }
+                        &:not(:last-of-type) {
+                            margin-bottom: 15px;
+                        }
                     }
                 }
+            }
+            @media #{$m}{
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+            @media #{$s}{
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+            @media #{$xs}{
+                padding-left: 30px;
+                padding-right: 30px;
             }
         }
         .menu-mobile {
             display: none;
-            height: 18px;
+            height: 16px;
             overflow: hidden;
             position: relative;
             right: 0;
             width: 18px;
-            @media #{$xs} {
+            @include mq(0,768px) {
                 display: block;
+            }
+            @media #{$s} {
+                height: 14px;
+            }
+            @media #{$xs} {
+                height: 12px;
             }
             &:before{
                 background: $black;

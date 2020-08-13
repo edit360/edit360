@@ -75,12 +75,21 @@
             grid-gap: 80px;
             grid-template-columns: repeat(3,[col] 1fr);
             width: 100%;
+            @include mq(321px,768px) {
+                grid-template-columns: repeat(2,[col] 1fr);
+            }
+            @media #{$xs} {
+                grid-template-columns: repeat(1,[col] 1fr);
+            }
             .cell {
                 width: 100%;
                 position: relative;
                 div {
                     width: 80%;
                     margin: 0 auto;
+                    @include mq(0,768px) {
+                        width: 100%;
+                    }
                     //Alinhamento
                     &[data-align="left"]{margin-left: 0;}
                     &[data-align="right"]{margin-right: 0;}

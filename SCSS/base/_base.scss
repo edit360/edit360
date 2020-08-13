@@ -7,13 +7,25 @@ body {
 	max-width: 1289px;
 	width: 100%;
 	margin: 0 auto;
-	@media #{$xs}{
-		padding-left: 30px;
-		padding-right: 30px;
-	}
 	@media #{$xl}{
 		padding-left: 60px;
 		padding-right: 60px;
+	}
+	@media #{$l}{
+		padding-left: 60px;
+		padding-right: 60px;
+	}
+	@media #{$m}{
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@media #{$s}{
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	@media #{$xs}{
+		padding-left: 30px;
+		padding-right: 30px;
 	}
 }
 
@@ -54,8 +66,16 @@ body {
 	font-family: $secondary-font;
 	font-weight: $bold;
 	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	@media #{$l}{
+		font-size: 43px;
+	}
+	@media #{$m}{
+		font-size: 38px;
+	}
+	@media #{$s}{
+		font-size: 33px;
+	}
 	@media #{$xs}{
-		padding-top: 60px;
 		font-size: 28px;
 	}
 }
