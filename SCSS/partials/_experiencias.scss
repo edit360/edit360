@@ -75,10 +75,12 @@
             grid-gap: 80px;
             grid-template-columns: repeat(3,[col] 1fr);
             width: 100%;
-            @include mq(321px,768px) {
+            @media #{$m} {
+                grid-gap: 60px;
                 grid-template-columns: repeat(2,[col] 1fr);
             }
-            @media #{$xs} {
+            @include mq(0,512px) {
+                grid-gap: 40px;
                 grid-template-columns: repeat(1,[col] 1fr);
             }
             .cell {
@@ -105,8 +107,7 @@
                         width: 100%;
                         img {
                             height: 100%;
-                            min-height: 100%;
-                            min-width: 100%;
+                            object-fit: cover;
                             transition: $tregular;
                             width: 100%;
                         }
@@ -150,6 +151,9 @@
                     }
                 }
             }
+        }
+        .btn {
+            display: block;
         }      
     }
 }
