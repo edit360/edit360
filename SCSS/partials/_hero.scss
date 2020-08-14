@@ -424,10 +424,7 @@
                         font-size: 24px;
                         font-weight: $bold;
                         margin-bottom: 15px;
-                        @media #{$s}{
-                            font-size: 22px;
-                        }
-                        @media #{$xs}{
+                        @include mq(0,512px) {
                             font-size: 20px;
                         }
                     }
@@ -435,10 +432,7 @@
                         font-family: $secondary-font;
                         font-size: 13px;
                         margin-bottom: 30px;
-                        @media #{$s}{
-                            margin-bottom: 20px;
-                        }
-                        @media #{$xs}{
+                        @include mq(0,512px) {
                             font-size: 12px;
                             margin-bottom: 10px;
                         }
@@ -451,13 +445,10 @@
                         margin-bottom: 38px;
                         padding: 14px;
                         width: 100%;
-                        @media #{$s}{
-                            font-size: 14px;
-                            margin-bottom: 25px;
-                        }
-                        @media #{$xs}{
-                            font-size: 12px;
+                        @include mq(0,512px) {
+                            font-size: 10px;
                             margin-bottom: 15px;
+                            padding: 8px;
                         }
                     }
                     label {
@@ -466,10 +457,7 @@
                         font-size: 18px;
                         font-weight: $bold;
                         margin-bottom: 15px;
-                        @media #{$s}{
-                            font-size: 16px;
-                        }
-                        @media #{$xs}{
+                        @include mq(0,512px) {
                             font-size: 12px;
                             margin-bottom: 10px;
                         }
@@ -482,12 +470,9 @@
                         margin: 0;
                         padding: 14px;
                         width: 100%;
-                        @media #{$s}{
-                            padding: 12px;
-                        }
-                        @media #{$xs}{
-                            font-size: 12px;
-                            padding: 10px;
+                        @include mq(0,512px) {
+                            font-size: 10px;
+                            padding: 8px;
                         }
                     }
                     div {
@@ -520,15 +505,10 @@
                         padding: 15px 0;
                         text-align: center;
                         transition: $tfast;
-                        @media #{$s}{
-                            font-size: 14px;
-                            padding-bottom: 14px;
-                            padding-top: 14px;
-                        }
-                        @media #{$xs}{
+                        @include mq(0,512px) {
                             font-size: 12px;
-                            padding-bottom: 12px;
-                            padding-top: 12px;
+                            padding-bottom: 8px;
+                            padding-top: 8px;
                         }
                         &:nth-of-type(1) {
                             display: block;
