@@ -3,13 +3,17 @@
     background: $mid-blue;
     display: flex;
     left: 100vw;
-    height: 100vh;
+    height: 100%;
     justify-content: center;
+    min-height: 100vh;
     position: fixed;
     top: 0;
     transition: $tslow;
     width: 100%;
     z-index: 1;
+    @include mq(0,768px) {
+        flex-direction: column;
+    }
     &.show {
         left: 0;
     }
@@ -86,6 +90,9 @@
                     display: inline-block;
                     &.artista-info {
                         width: 50%;
+                        @include mq(0,768px) {
+                            width: 100%;
+                        }
                         .date {
                             margin-bottom: 70px;
                             padding: 0 15px;
@@ -145,6 +152,9 @@
                         height: 60vh;
                         position: relative;
                         width: 40%;
+                        @include mq(0,768px) {
+                            display: none;
+                        }
                         &:after {
                             background-image: url("../img/CCB-Gradient.png");
                             background-position: center;
