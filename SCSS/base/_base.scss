@@ -56,7 +56,20 @@ body {
 		@media #{$xs}{
 			font-size: 24px;
 			padding: 10px;
-        }
+		}
+		@media #{$s}{
+			font-size: 26px;
+			padding: 10px;
+		}
+		@media #{$m}{
+			font-size: 30px;
+			padding: 12px;
+		}
+		@media #{$l}{
+			font-size: 34px;
+			padding: 15px;
+		}
+		
 	}
 }
 
@@ -97,7 +110,10 @@ body {
 		width: 175px;
 		font-size: 15px;
 		display: block;
-	} 
+	}
+	@media #{$s}{
+		display: block;
+	}  
 	&:before {
 		background: $blue;
 		content: "";
