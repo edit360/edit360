@@ -92,7 +92,7 @@ header {
                         @media #{$m}, #{$s}, #{$xs} {
                             font-size: 35px;
                             &:hover {
-                                color: $white;
+                                color: $white !important;
                             }
                         }
                         &:hover {

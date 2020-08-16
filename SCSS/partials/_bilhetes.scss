@@ -4,7 +4,7 @@
     background-image: url("../img/CCB-Gradient.png");
     background-position: top;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     height: 100%;
     padding-top: 150px;
     position: relative;
@@ -18,8 +18,17 @@
         width: 100%;
         z-index: 0;
         position: absolute;
+        @media #{$l}{
+            height: 450px;
+        }
+        @media #{$m}{
+            height: 440px;
+        }
+        @media #{$s}{
+            height: 360px;
+        }
         @media #{$xs}{
-            height: 530px;
+            height: 295px;
         }   
     }
     .wrapper {
@@ -127,7 +136,7 @@
                         article{
                             background-image: url("../img/Bolas/Rectangle 11.png");
                             padding: 130px 20px;
-                            @media #{$m}, #{$s}, #{$xs}{
+                            @media #{$l}, #{$m}, #{$s}, #{$xs}{
                                 padding: 80px 20px;
                             }
                             &:after {
