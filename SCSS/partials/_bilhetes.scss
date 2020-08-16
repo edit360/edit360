@@ -102,7 +102,7 @@
                         margin-bottom: 40px;
                         width: 45%!important;
                     }
-                    @media #{$m}, #{$s}{
+                    @media #{$s}, #{$xs}{
                         margin-bottom: 40px;
                         width: 100%!important;
                     }
