@@ -89,8 +89,11 @@ header {
                         color: $black;
                         font-size: 18px;
                         font-weight: $bold;
-                        @media #{$m} {
-                            font-size: 16px;
+                        @include mq(0,768px) {
+                            font-size: 35px;
+                            &:hover {
+                                color: $white;
+                            }
                         }
                         &:hover {
                             color: $blue;
