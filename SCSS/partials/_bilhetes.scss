@@ -31,14 +31,14 @@
                 display: flex;
                 justify-content: center;
                 width: 100%;
-                @media #{$xs}, #{$s}, #{$m}{//
+                @include mq(0,768px) {
                     display: block;
                 }
                 div {
                     display: inline-block;
                     &:nth-of-type(1) {
                         width: 60%;
-                        @media #{$xs}, #{$s}, #{$m}{
+                        @include mq(0,768px) {
                             width: 100%;
                         }
                         img {
@@ -48,7 +48,7 @@
                     }
                     &:nth-of-type(2) {
                         width: 40%;
-                        @media #{$xs}, #{$s}, #{$m}{
+                        @include mq(0,768px) {
                             width: 100%;
                         } 
                         h3 {
@@ -89,14 +89,21 @@
                 margin-bottom: 50px;
                 margin-top: 75px;
                 width: 100%;
-                @media #{$xs}, #{$s}{//
-                    display: block;
-                    align-items: center;   
+                @include mq(0,768px) {
+                    display: inline-block
                 }
                 .cartao {
                     height: 100%;
                     width: 20%;
-                    @media #{$xs}, #{$s}{//
+                    @media #{$m}{
+                        display: inline-block;
+                        margin-left: 2.5%;
+                        margin-right: 2.5%;
+                        margin-bottom: 40px;
+                        width: 45%!important;
+                    }
+                    @include mq(0,512px){
+                        margin-bottom: 40px;
                         width: 100%!important;
                     }
                     &[data-cartao="xs"]{
@@ -120,6 +127,9 @@
                         article{
                             background-image: url("../img/Bolas/Rectangle 11.png");
                             padding: 130px 20px;
+                            @include mq(0,768px){
+                                padding: 80px 20px;
+                            }
                             &:after {
                                 content: "FULL EXPERIENCE";
                                 background-image: url("../img/CCB-Gradient.png");
