@@ -29,16 +29,16 @@
             &.cartaoccb {
                 align-items: center;
                 display: flex;
-                @media #{$xs}, #{$s}{
-                    display: block;
-                } 
                 justify-content: center;
                 width: 100%;
+                @media #{$xs}, #{$s}, #{$m}{//
+                    display: block;
+                }
                 div {
                     display: inline-block;
                     &:nth-of-type(1) {
                         width: 60%;
-                        @media #{$xs}, #{$s}{
+                        @media #{$xs}, #{$s}, #{$m}{
                             width: 100%;
                         }
                         img {
@@ -48,7 +48,7 @@
                     }
                     &:nth-of-type(2) {
                         width: 40%;
-                        @media #{$xs}, #{$s}{
+                        @media #{$xs}, #{$s}, #{$m}{
                             width: 100%;
                         } 
                         h3 {
@@ -60,6 +60,10 @@
                             text-decoration-line: underline;
                             @media #{$xs}{
                                 font-size: 15px;
+                                margin-bottom: 10px;
+                            }
+                            @media #{$m}{
+                                font-size: 25px;
                                 margin-bottom: 10px;
                             }   
                         }
@@ -85,15 +89,14 @@
                 margin-bottom: 50px;
                 margin-top: 75px;
                 width: 100%;
-                @media #{$xs}{
+                @media #{$xs}, #{$s}{//
                     display: block;
-                    align-items: center;
-                    
-                } 
+                    align-items: center;   
+                }
                 .cartao {
                     height: 100%;
                     width: 20%;
-                    @media #{$xs}{
+                    @media #{$xs}, #{$s}{//
                         width: 100%!important;
                     }
                     &[data-cartao="xs"]{
@@ -124,6 +127,12 @@
                                 background-repeat: no-repeat;
                                 background-size: 300%;
                                 font-size: 44px;
+                                @media #{$xs}{
+                                    font-size: 34px;
+                                }
+                                @media #{$s}{
+                                    font-size: 38px;
+                                }
                             }
                         }
                     }
@@ -198,6 +207,10 @@
                             padding: 15px 0 5px;
                             margin-bottom: 50px;
                         }
+                        @media #{$s}{
+                            padding: 18px 0 5px;
+                            margin-bottom: 50px;
+                        }
                         p {
                             color: $white;
                             display: inline-block;
@@ -221,10 +234,10 @@
         }
     }
     h2{
-        @media #{$xs}, #{$s}{
+        @media #{$xs}{
             padding-top: 50px;
         }
-        @media #{$s}{
+        @media #{$s}, #{$m}{
             padding-top: 80px;
         }
     }
