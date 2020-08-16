@@ -18,7 +18,7 @@ header {
             width: 100%;
             max-width: 50%;
             z-index: 1;
-            @include mq(0,768px) {
+            @media #{$m}, #{$s}, #{$xs} {
                 max-width: 90%;
             }
             a {
@@ -89,7 +89,7 @@ header {
                         color: $black;
                         font-size: 18px;
                         font-weight: $bold;
-                        @include mq(0,768px) {
+                        @media #{$m}, #{$s}, #{$xs} {
                             font-size: 35px;
                             &:hover {
                                 color: $white;
@@ -101,7 +101,7 @@ header {
                     }
                 }
             }
-            @include mq(0,768px){
+            @media #{$m}, #{$s}, #{$xs}{
                 align-items: center;
                 background: $blue;
                 display: flex;
@@ -147,7 +147,7 @@ header {
             position: relative;
             right: 0;
             width: 18px;
-            @include mq(0,768px) {
+            @media #{$m}, #{$s}, #{$xs} {
                 display: block;
             }
             @media #{$s} {

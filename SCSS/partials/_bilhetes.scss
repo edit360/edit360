@@ -31,14 +31,14 @@
                 display: flex;
                 justify-content: center;
                 width: 100%;
-                @include mq(0,768px) {
+                @media #{$m}, #{$s}, #{$xs} {
                     display: block;
                 }
                 div {
                     display: inline-block;
                     &:nth-of-type(1) {
                         width: 60%;
-                        @include mq(0,768px) {
+                        @media #{$m}, #{$s}, #{$xs} {
                             width: 100%;
                         }
                         img {
@@ -48,7 +48,7 @@
                     }
                     &:nth-of-type(2) {
                         width: 40%;
-                        @include mq(0,768px) {
+                        @media #{$m}, #{$s}, #{$xs} {
                             width: 100%;
                         } 
                         h3 {
@@ -89,7 +89,7 @@
                 margin-bottom: 50px;
                 margin-top: 75px;
                 width: 100%;
-                @include mq(0,768px) {
+                @media #{$m}, #{$s}, #{$xs} {
                     display: inline-block
                 }
                 .cartao {
@@ -102,7 +102,7 @@
                         margin-bottom: 40px;
                         width: 45%!important;
                     }
-                    @include mq(0,512px){
+                    @media #{$m}, #{$s}{
                         margin-bottom: 40px;
                         width: 100%!important;
                     }
@@ -127,7 +127,7 @@
                         article{
                             background-image: url("../img/Bolas/Rectangle 11.png");
                             padding: 130px 20px;
-                            @include mq(0,768px){
+                            @media #{$m}, #{$s}, #{$xs}{
                                 padding: 80px 20px;
                             }
                             &:after {

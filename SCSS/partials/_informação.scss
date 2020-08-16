@@ -14,7 +14,7 @@
         z-index: 0;
         position: absolute;
         z-index: -1;
-        @include mq(0,768px) {
+        @media #{$m}, #{$s}, #{$xs} {
             height: 880px;
         }
     }
@@ -22,19 +22,19 @@
         align-items: center;
         display: flex;
         justify-content: space-between;
-        @include mq(0,768px) {
+        @media #{$m}, #{$s}, #{$xs} {
             flex-direction: column;
         }
         article {
             &:nth-of-type(1) {
                 width: 60%;
-                @include mq(0,768px) {
+                @media #{$m}, #{$s}, #{$xs} {
                     margin-bottom: 80px;
                     width: 100%;
                 }
                 img {
                     width: 100%;
-                    @include mq(0,768px) {
+                    @media #{$m}, #{$s}, #{$xs} {
                         margin-bottom: 20px;
                     }
                 }
@@ -48,7 +48,7 @@
                     font-weight: $regular;
                     line-height: $primary-line-height;
                     text-align: justify;
-                    @include mq(0,768px) {
+                    @media #{$m}, #{$s}, #{$xs} {
                         font-size: 16px;
                         text-align: left;
                     }
@@ -56,7 +56,7 @@
                         color: $blue;
                         font-size: 18px;
                         font-weight: $bold;
-                        @include mq(0,768px) {
+                        @media #{$m}, #{$s}, #{$xs} {
                             font-size: 16px;
                         }
                     }
@@ -64,7 +64,7 @@
             }
             &:nth-of-type(2) {
                 width: 30%;
-                @include mq(0,768px) {
+                @media #{$m}, #{$s}, #{$xs} {
                     width: 100%;
                 }
                 h4 {
@@ -83,13 +83,13 @@
                     font-weight: $regular;
                     line-height: $primary-line-height;
                     margin-bottom: 30px;
-                    @include mq(0,768px) {
+                    @media #{$m}, #{$s}, #{$xs} {
                         font-size: 16px;
                     }
                     span {
                         color: $blue;
                         font-size: 18px;
-                        @include mq(0,768px) {
+                        @media #{$m}, #{$s}, #{$xs} {
                             font-size: 16px;
                         }
                     }
@@ -97,7 +97,7 @@
                 div {
                     width: 50%;
                     margin: 100px auto 0;
-                    @include mq(0,768px) {
+                    @media #{$m}, #{$s}, #{$xs} {
                         margin: 40px 0;
                     }
                     img {

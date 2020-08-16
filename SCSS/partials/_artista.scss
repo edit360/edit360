@@ -11,7 +11,7 @@
     transition: $tslow;
     width: 100%;
     z-index: 1;
-    @include mq(0,768px) {
+    @media #{$m}, #{$s}, #{$xs} {
         flex-direction: column;
     }
     &.show {
@@ -90,7 +90,7 @@
                     display: inline-block;
                     &.artista-info {
                         width: 50%;
-                        @include mq(0,768px) {
+                        @media #{$m}, #{$s}, #{$xs} {
                             width: 100%;
                         }
                         .date {
@@ -152,7 +152,7 @@
                         height: 60vh;
                         position: relative;
                         width: 40%;
-                        @include mq(0,768px) {
+                        @media #{$m}, #{$s}, #{$xs} {
                             display: none;
                         }
                         &:after {
