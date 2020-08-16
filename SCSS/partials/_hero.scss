@@ -22,7 +22,7 @@
                 @media #{$m} {
                     max-width: 75%;
                 }
-                @include mq(0,768px) {
+                @include mq(0,512px) {
                     max-width: 100%;
                 }
                 p {
@@ -91,6 +91,12 @@
                 padding-bottom: 215px;
                 position: relative;
                 z-index: 1;
+                @media #{$m} {
+                    padding-bottom: 175px;
+                }
+                @include mq(0,512px) {
+                    padding-bottom: 125px;
+                }
                 &:after {
                     background-image: url("../img/CCB-Ondas.png");
                     background-position: center;
@@ -111,6 +117,12 @@
                     &:nth-of-type(1) {
                         margin-bottom: 170px;
                         max-width: 100%;
+                        @media #{$m} {
+                            margin-bottom: 140px;
+                        }
+                        @include mq(0,512px) {
+                            margin-bottom: 100px;
+                        }
                         h1 {
                             color: $black;
                             display: inline-block;

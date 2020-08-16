@@ -14,16 +14,32 @@
         z-index: 0;
         position: absolute;
         z-index: -1;
+        @include mq(0,768px) {
+            height: 880px;
+        }
     }
     .wrapper {
         align-items: center;
         display: flex;
         justify-content: space-between;
+        @include mq(0,768px) {
+            flex-direction: column;
+        }
         article {
             &:nth-of-type(1) {
                 width: 60%;
+                @include mq(0,768px) {
+                    margin-bottom: 80px;
+                    width: 100%;
+                }
                 img {
                     width: 100%;
+                    @include mq(0,768px) {
+                        margin-bottom: 20px;
+                    }
+                }
+                .sub-title {
+                    margin-bottom: 30px;
                 }
                 p {
                     color: $white;
@@ -32,15 +48,25 @@
                     font-weight: $regular;
                     line-height: $primary-line-height;
                     text-align: justify;
+                    @include mq(0,768px) {
+                        font-size: 16px;
+                        text-align: left;
+                    }
                     span {
                         color: $blue;
                         font-size: 18px;
                         font-weight: $bold;
+                        @include mq(0,768px) {
+                            font-size: 16px;
+                        }
                     }
                 }
             }
             &:nth-of-type(2) {
                 width: 30%;
+                @include mq(0,768px) {
+                    width: 100%;
+                }
                 h4 {
                     color: $black;
                     font-family: $secondary-font;
@@ -57,14 +83,23 @@
                     font-weight: $regular;
                     line-height: $primary-line-height;
                     margin-bottom: 30px;
+                    @include mq(0,768px) {
+                        font-size: 16px;
+                    }
                     span {
                         color: $blue;
                         font-size: 18px;
+                        @include mq(0,768px) {
+                            font-size: 16px;
+                        }
                     }
                 }
                 div {
                     width: 50%;
                     margin: 100px auto 0;
+                    @include mq(0,768px) {
+                        margin: 40px 0;
+                    }
                     img {
                         cursor: pointer;
                         transition: $tfast;
